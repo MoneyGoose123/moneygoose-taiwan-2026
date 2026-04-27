@@ -587,6 +587,138 @@ footer .brand {
 }
 .caution-box ul { padding-left: 20px; }
 .caution-box li { font-size: 14px; margin-bottom: 8px; color: #4a3800; }
+
+/* MARRIOTT SECTION */
+.marriott-section {
+  background: linear-gradient(135deg, #0e1d3d 0%, #1a2d5e 100%);
+  color: var(--white);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+.marriott-section::before {
+  content: "BONVOY";
+  position: absolute;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 240px;
+  font-weight: 900;
+  color: rgba(212, 160, 23, 0.05);
+  top: -20px;
+  right: -50px;
+  letter-spacing: 20px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.marriott-section .section-title h2 { color: var(--white); }
+.marriott-section .section-title .num { color: var(--gold); }
+.marriott-section .section-title h2::after { background: var(--gold); }
+.bonvoy-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: #0e1d3d;
+  padding: 6px 18px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+.marriott-lead {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 56px;
+  font-size: 15px;
+  opacity: 0.85;
+  line-height: 2;
+}
+.tier-block {
+  margin-bottom: 48px;
+  position: relative;
+  z-index: 1;
+}
+.tier-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(212, 160, 23, 0.4);
+}
+.tier-label .tier-name {
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  font-weight: 700;
+}
+.tier-label .tier-jp {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--white);
+}
+.marriott-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.m-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(212, 160, 23, 0.25);
+  padding: 24px;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+.m-card:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.m-card .brand-tag {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.m-card h4 {
+  font-size: 17px;
+  margin-bottom: 4px;
+  color: var(--white);
+}
+.m-card .tc-name {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 12px;
+}
+.m-card .meta {
+  font-size: 12px;
+  color: var(--gold);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.m-card p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.7;
+}
+.bonvoy-tip {
+  background: rgba(212, 160, 23, 0.1);
+  border: 1px solid rgba(212, 160, 23, 0.3);
+  padding: 24px;
+  border-radius: 10px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+.bonvoy-tip strong { color: var(--gold); }
+.bonvoy-tip ul {
+  margin-top: 12px;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.85);
+}
 </style>
 </head>
 <body>
@@ -975,6 +1107,140 @@ footer .brand {
         <li>Booking.com / Agoda / 楽天トラベルで価格比較可能</li>
         <li>同じ部屋でも予約サイトで価格差あり。3-4サイト比較がおすすめ</li>
         <li>朝食付きプランは便利だが、台湾は外で朝食を食べる文化が楽しいので不要派も多い</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MARRIOTT BONVOY -->
+<section class="marriott-section">
+  <div class="container">
+    <div class="section-title">
+      <span class="bonvoy-badge">MARRIOTT BONVOY</span>
+      <div class="num">FOR BONVOY MEMBERS</div>
+      <h2>マリオット系ホテル</h2>
+    </div>
+    <p class="marriott-lead">
+      Bonvoy会員の方向けに、台北のマリオット系列ホテルをティア別にピックアップ。<br>
+      ポイント宿泊・無料朝食・ラウンジ特典なども含めて検討の参考にどうぞ。
+    </p>
+
+    <!-- LUXURY -->
+    <div class="tier-block">
+      <div class="tier-label">
+        <span class="tier-name">LUXURY · PREMIUM</span>
+        <span class="tier-jp">ラグジュアリー / プレミアム</span>
+      </div>
+      <div class="marriott-grid">
+        <div class="m-card">
+          <span class="brand-tag">W HOTELS</span>
+          <h4>W Taipei</h4>
+          <div class="tc-name">台北W飯店</div>
+          <div class="meta">📍 信義（台北101直結エリア）</div>
+          <p>象山線市政府駅徒歩3分。インフィニティプール・夜景バーが名物。デザイン系・若手参加者に最適。</p>
+        </div>
+        <div class="m-card">
+          <span class="brand-tag">LE MÉRIDIEN</span>
+          <h4>Le Méridien Taipei</h4>
+          <div class="tc-name">台北寒舍艾美酒店</div>
+          <div class="meta">📍 信義（台北101徒歩圏）</div>
+          <p>アート性高い5つ星。落ち着いた高級感を求める方に。市政府駅徒歩5分。</p>
+        </div>
+        <div class="m-card">
+          <span class="brand-tag">MARRIOTT HOTELS</span>
+          <h4>Taipei Marriott Hotel</h4>
+          <div class="tc-name">台北萬豪酒店</div>
+          <div class="meta">📍 大直・劍南路（中心から少し離れる）</div>
+          <p>Bonvoy王道。広い客室・本格スパ・有名鉄板焼。中心部からタクシー15分なので移動考慮。</p>
+        </div>
+        <div class="m-card">
+          <span class="brand-tag">SHERATON</span>
+          <h4>Sheraton Grand Taipei</h4>
+          <div class="tc-name">台北喜來登大飯店</div>
+          <div class="meta">📍 善導寺（台北駅徒歩圏）</div>
+          <p>台北駅徒歩10分・MRT直結。九份ツアー集合に最も便利。グランドティア。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SELECT -->
+    <div class="tier-block">
+      <div class="tier-label">
+        <span class="tier-name">SELECT · DISTINCTIVE</span>
+        <span class="tier-jp">セレクト / ディスティンクティブ</span>
+      </div>
+      <div class="marriott-grid">
+        <div class="m-card">
+          <span class="brand-tag">RENAISSANCE</span>
+          <h4>Renaissance Taipei Shihlin</h4>
+          <div class="tc-name">台北士林萬麗酒店</div>
+          <div class="meta">📍 士林（士林夜市直結）</div>
+          <p>士林夜市まで徒歩3分。<strong style="color:var(--gold)">夜市好きには究極のロケーション</strong>。MRT劍潭駅すぐ。</p>
+        </div>
+        <div class="m-card">
+          <span class="brand-tag">COURTYARD</span>
+          <h4>Courtyard by Marriott Taipei</h4>
+          <div class="tc-name">台北六福萬怡酒店</div>
+          <div class="meta">📍 南京復興（東区エリア）</div>
+          <p>MRT2駅交差の便利な立地。コスパ◎で東区の飲食街にもアクセス良好。</p>
+        </div>
+        <div class="m-card">
+          <span class="brand-tag">COURTYARD</span>
+          <h4>Courtyard Taipei Downtown</h4>
+          <div class="tc-name">台北中山時代寓所</div>
+          <div class="meta">📍 中山（2024年開業）</div>
+          <p>新しい中山エリアのCourtyard。MRT雙連駅徒歩圏で寧夏夜市にも近い。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIFESTYLE -->
+    <div class="tier-block">
+      <div class="tier-label">
+        <span class="tier-name">LIFESTYLE · MODERN</span>
+        <span class="tier-jp">ライフスタイル / モダン</span>
+      </div>
+      <div class="marriott-grid">
+        <div class="m-card">
+          <span class="brand-tag">ALOFT</span>
+          <h4>Aloft Taipei Zhongshan</h4>
+          <div class="tc-name">台北中山雅樂軒酒店</div>
+          <div class="meta">📍 中山（中心部）</div>
+          <p>中山駅徒歩圏でMRT便利。モダン・若々しい雰囲気。Bonvoy会員のコスパ枠としても人気。</p>
+        </div>
+        <div class="m-card">
+          <span class="brand-tag">ALOFT</span>
+          <h4>Aloft Taipei Songshan</h4>
+          <div class="tc-name">台北松山雅樂軒酒店</div>
+          <div class="meta">📍 松山（松山空港近く）</div>
+          <p>松山空港直結エリア。日本からの直行便（羽田⇔松山）利用者には最便利。</p>
+        </div>
+        <div class="m-card">
+          <span class="brand-tag">MOXY</span>
+          <h4>Moxy Taipei Beitou</h4>
+          <div class="tc-name">台北北投寓行酒店</div>
+          <div class="meta">📍 北投（温泉エリア）</div>
+          <p>温泉付き。中心から離れるが、早着組が前後泊で温泉を楽しむのに◎。</p>
+        </div>
+        <div class="m-card">
+          <span class="brand-tag">AC HOTEL</span>
+          <h4>AC Hotel Taipei Beitou</h4>
+          <div class="tc-name">台北北投AC酒店</div>
+          <div class="meta">📍 北投（温泉エリア）</div>
+          <p>欧州系モダンデザイン。温泉地ながら洗練された雰囲気。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bonvoy-tip">
+      <strong>💡 Bonvoy会員向けTIPS</strong>
+      <ul>
+        <li>11月の台北は<strong>オフピーク後半</strong>でポイント宿泊レートが下がる傾向</li>
+        <li><strong>ティタニウム/プラチナ</strong>会員は無料朝食・ラウンジアクセスを活かして食費節約</li>
+        <li>集合場所重視なら <strong>Sheraton Grand（台北駅）</strong> または <strong>Aloft中山</strong> が便利</li>
+        <li>夜市目当てなら <strong>Renaissance士林</strong> の立地が最強（士林夜市徒歩3分）</li>
+        <li>家族同伴・広い部屋なら <strong>Marriott大直</strong>、夜景・記念日は <strong>W Taipei</strong></li>
+        <li>ポイント宿泊は<strong>5泊目無料</strong>を活用すると前後泊延長が現実的</li>
       </ul>
     </div>
   </div>
