@@ -415,6 +415,178 @@ footer .brand {
 
 /* SECTION COLORS */
 .section-light { background: var(--light); }
+.section-dark {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d0a0a 100%);
+  color: var(--white);
+}
+.section-dark .section-title h2 { color: var(--white); }
+.section-dark .section-title .num { color: var(--gold); }
+.section-dark .section-title h2::after { background: var(--gold); }
+
+/* ABOUT */
+.about-lead {
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 500;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 48px;
+  letter-spacing: 1px;
+}
+.about-lead .accent { color: var(--gold); font-weight: 700; }
+.about-points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+.about-point {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(212, 160, 23, 0.3);
+  padding: 28px;
+  border-radius: 12px;
+  text-align: center;
+}
+.about-point .ap-num {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 36px;
+  color: var(--gold);
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.about-point h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: var(--white);
+}
+.about-point p {
+  font-size: 14px;
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+/* HOTELS */
+.hotel-area {
+  margin-bottom: 48px;
+}
+.hotel-area h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hotel-area h3 .stars { color: var(--gold); font-size: 16px; letter-spacing: 2px; }
+.hotel-area .area-desc {
+  background: var(--white);
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--gray);
+  border-left: 3px solid var(--red);
+}
+.hotel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.hotel-card {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  transition: transform 0.2s;
+}
+.hotel-card:hover { transform: translateY(-2px); }
+.hotel-card .price-tag {
+  display: inline-block;
+  background: var(--red);
+  color: var(--white);
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.hotel-card .price-tag.mid { background: var(--gold); color: var(--ink); }
+.hotel-card .price-tag.budget { background: #6b7280; }
+.hotel-card h4 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.hotel-card .tc-name {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 13px;
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+.hotel-card p {
+  font-size: 13px;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* PREP */
+.prep-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.prep-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+.prep-card h3 {
+  font-size: 17px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--red);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.prep-card ul {
+  list-style: none;
+  padding: 0;
+}
+.prep-card li {
+  font-size: 14px;
+  padding: 6px 0 6px 22px;
+  position: relative;
+  color: var(--ink);
+}
+.prep-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 700;
+}
+.prep-card li small {
+  display: block;
+  color: var(--gray);
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+/* CAUTIONS */
+.caution-box {
+  background: #fff8e1;
+  border-left: 4px solid var(--gold);
+  padding: 24px 28px;
+  border-radius: 8px;
+  margin-top: 32px;
+}
+.caution-box h3 {
+  color: var(--red-deep);
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+.caution-box ul { padding-left: 20px; }
+.caution-box li { font-size: 14px; margin-bottom: 8px; color: #4a3800; }
 </style>
 </head>
 <body>
@@ -457,6 +629,49 @@ footer .brand {
     </div>
   </div>
 </div>
+
+<!-- ABOUT -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-title">
+      <div class="num">ABOUT THIS TRIP</div>
+      <h2>なぜ、台湾なのか</h2>
+    </div>
+    <p class="about-lead">
+      これは、ただの旅行ではありません。<br>
+      <span class="accent">海外販売を生業にする仲間</span>と、<br>
+      その<span class="accent">「現場」</span>を一緒に体感する3泊4日です。
+    </p>
+    <p style="text-align:center; opacity:0.85; max-width:700px; margin:0 auto; font-size:15px; line-height:2;">
+      MoneyGooseと catawiki 永廣スクール、海外マーケットを舞台に戦う2つのコミュニティが、台北で一同に会します。<br>
+      普段オンラインでしか会えないメンバーと、九份の提灯の下で、夜市の屋台で、円卓を囲みながら——<br>
+      ビジネスの話も、家族の話も、これからの夢も、ぜんぶ。<br>
+      初心者の方も、台湾が初めての方も、<strong style="color:var(--gold)">完全に歓迎</strong>です。
+    </p>
+    <div class="about-points">
+      <div class="about-point">
+        <div class="ap-num">合</div>
+        <h3>2スクール合同開催</h3>
+        <p>MoneyGoose × catawiki永廣スクール。普段交わらないメンバー同士の出会いと学び。</p>
+      </div>
+      <div class="about-point">
+        <div class="ap-num">食</div>
+        <h3>本場の食を囲む</h3>
+        <p>歓迎会・九份茶藝館・打ち上げの3つの食卓で、自然と仲間が増えていきます。</p>
+      </div>
+      <div class="about-point">
+        <div class="ap-num">街</div>
+        <h3>台北＆九份を満喫</h3>
+        <p>千と千尋の世界・夜市・歴史ある問屋街。観光地を効率よくおさえます。</p>
+      </div>
+      <div class="about-point">
+        <div class="ap-num">自</div>
+        <h3>自由度の高い設計</h3>
+        <p>現地集合・現地解散。家族同伴OK。自分のペースでツアーを楽しめます。</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- SCHEDULE -->
 <section class="section">
@@ -652,56 +867,200 @@ footer .brand {
   </div>
 </section>
 
-<!-- TIPS -->
+<!-- HOTELS -->
 <section class="section">
   <div class="container">
     <div class="section-title">
-      <div class="num">PRACTICAL TIPS</div>
-      <h2>持ち物・事前準備</h2>
+      <div class="num">HOTELS</div>
+      <h2>おすすめホテル</h2>
     </div>
-    <div class="tips">
-      <div class="tip-item">
-        <div class="icon">1</div>
-        <div>
-          <h3>ホテルは各自予約</h3>
-          <p>推奨エリア：中山・台北駅・西門町。MRTで集合場所にアクセスしやすく、夜市にも近いです。</p>
+    <p style="text-align:center; max-width:600px; margin:0 auto 48px; color:var(--gray); font-size:14px;">
+      ホテルは <strong style="color:var(--ink)">各自で予約</strong> をお願いします。集合場所（台北駅・レストラン）へのアクセスを考慮し、以下3エリアから選んでください。MRT沿線が便利です。
+    </p>
+
+    <!-- 中山エリア -->
+    <div class="hotel-area">
+      <h3>中山（ジョンシャン）<span class="stars">★★★★★ 第一推奨</span></h3>
+      <div class="area-desc">
+        台北駅から1駅、夜市・寧夏夜市まで徒歩圏。日本人観光客の定番エリア。日系ホテル・買い物・飲食が集中していて初台湾でも安心。
+      </div>
+      <div class="hotel-grid">
+        <div class="hotel-card">
+          <span class="price-tag">高級</span>
+          <h4>Regent Taipei</h4>
+          <div class="tc-name">台北晶華酒店</div>
+          <p>5つ星老舗ホテル。ハイクラスで間違いない選択。</p>
+        </div>
+        <div class="hotel-card">
+          <span class="price-tag mid">中級</span>
+          <h4>Hotel Royal-Nikko Taipei</h4>
+          <div class="tc-name">老爺大酒店</div>
+          <p>日系で日本語対応◎。中山駅徒歩3分。</p>
+        </div>
+        <div class="hotel-card">
+          <span class="price-tag mid">中級</span>
+          <h4>Aloft Taipei Zhongshan</h4>
+          <div class="tc-name">台北中山雅樂軒酒店</div>
+          <p>マリオット系モダン。コスパ◎で人気。</p>
+        </div>
+        <div class="hotel-card">
+          <span class="price-tag budget">リーズナブル</span>
+          <h4>Hotel Cozzi Minsheng</h4>
+          <div class="tc-name">和逸飯店 民生館</div>
+          <p>清潔・安価・MRT徒歩圏。コスパ重視ならここ。</p>
         </div>
       </div>
-      <div class="tip-item">
-        <div class="icon">2</div>
-        <div>
-          <h3>悠遊カード（EasyCard）を空港で購入</h3>
-          <p>桃園空港・松山空港のコンビニで購入可能。MRT・バス・コンビニで使える必須ICカード。</p>
+    </div>
+
+    <!-- 台北駅エリア -->
+    <div class="hotel-area">
+      <h3>台北駅 / 北門 <span class="stars">★★★★ 移動重視</span></h3>
+      <div class="area-desc">
+        11/21の集合場所「台北車站」直結エリア。空港MRTも始発駅で、桃園空港アクセス最強。九份ツアーの集合に最も近いです。
+      </div>
+      <div class="hotel-grid">
+        <div class="hotel-card">
+          <span class="price-tag">高級</span>
+          <h4>Palais de Chine Hotel</h4>
+          <div class="tc-name">君品酒店</div>
+          <p>建築美が圧巻の高級ホテル。台北駅徒歩2分。</p>
+        </div>
+        <div class="hotel-card">
+          <span class="price-tag mid">中級</span>
+          <h4>Caesar Park Hotel Taipei</h4>
+          <div class="tc-name">台北凱撒大飯店</div>
+          <p>台北駅直結。観光・移動最重視ならここ。</p>
+        </div>
+        <div class="hotel-card">
+          <span class="price-tag mid">中級</span>
+          <h4>citizenM Taipei North Gate</h4>
+          <div class="tc-name">北門世民酒店</div>
+          <p>ヨーロッパ系デザイナーズ。共用スペースが楽しい。</p>
+        </div>
+        <div class="hotel-card">
+          <span class="price-tag budget">リーズナブル</span>
+          <h4>Cosmos Hotel Taipei</h4>
+          <div class="tc-name">天成大飯店</div>
+          <p>台北駅前の老舗。広めの部屋でコスパ◎。</p>
         </div>
       </div>
-      <div class="tip-item">
-        <div class="icon">3</div>
-        <div>
-          <h3>移動アプリのインストール</h3>
-          <p>Uber と Taxi Go を事前にインストール推奨。市内移動はMRT＋Uberが基本。</p>
+    </div>
+
+    <!-- 西門町エリア -->
+    <div class="hotel-area">
+      <h3>西門町（シーメンディン）<span class="stars">★★★ 観光重視</span></h3>
+      <div class="area-desc">
+        台北の渋谷的エリア。若者向けで夜遅くまで賑やか。観光・お土産・夜遊び重視の方に。一人参加・若手メンバーにおすすめ。
+      </div>
+      <div class="hotel-grid">
+        <div class="hotel-card">
+          <span class="price-tag mid">中級</span>
+          <h4>Hotel Resonance Taipei</h4>
+          <div class="tc-name">逐鹿職人旅店</div>
+          <p>台北駅・西門の中間。デザイナーズで写真映え◎。</p>
+        </div>
+        <div class="hotel-card">
+          <span class="price-tag budget">リーズナブル</span>
+          <h4>Just Sleep Ximending</h4>
+          <div class="tc-name">捷絲旅 西門館</div>
+          <p>西門町中心部。観光ベース最適。</p>
         </div>
       </div>
-      <div class="tip-item">
-        <div class="icon">4</div>
-        <div>
-          <h3>11/21は11:00台北駅集合</h3>
-          <p>朝便で到着の方は荷物をホテルに置いてから直行できます。遅れる場合は瑞芳駅で合流可。</p>
-        </div>
+    </div>
+
+    <div style="background:var(--white); padding:24px; border-radius:12px; margin-top:32px; border-left:4px solid var(--red);">
+      <strong style="color:var(--red);">予約のヒント</strong>
+      <ul style="margin-top:12px; padding-left:20px; font-size:14px; color:var(--gray);">
+        <li>11月の台北はベストシーズンで埋まりやすい → <strong>9月までに予約推奨</strong></li>
+        <li>Booking.com / Agoda / 楽天トラベルで価格比較可能</li>
+        <li>同じ部屋でも予約サイトで価格差あり。3-4サイト比較がおすすめ</li>
+        <li>朝食付きプランは便利だが、台湾は外で朝食を食べる文化が楽しいので不要派も多い</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TIPS / PREP -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <div class="num">PREPARATION</div>
+      <h2>準備するもの・気をつけること</h2>
+    </div>
+
+    <div class="prep-grid">
+      <div class="prep-card">
+        <h3>📄 必携書類</h3>
+        <ul>
+          <li>パスポート<small>残存有効期間 出国時3ヶ月以上</small></li>
+          <li>航空券・eチケット控え</li>
+          <li>ホテル予約確認書</li>
+          <li>海外旅行保険証券<small>クレカ付帯でもOK</small></li>
+        </ul>
       </div>
-      <div class="tip-item">
-        <div class="icon">5</div>
-        <div>
-          <h3>服装：歩きやすい靴必須</h3>
-          <p>九份は石段が多く滑りやすいため、スニーカー推奨。11月の台北は20℃前後で長袖＋羽織り物が安心。</p>
-        </div>
+
+      <div class="prep-card">
+        <h3>💳 お金関係</h3>
+        <ul>
+          <li>クレジットカード<small>VISA / Mastercard が無難</small></li>
+          <li>現金 NT$ 5,000〜10,000<small>夜市・タクシー用</small></li>
+          <li>悠遊カード<small>到着後コンビニで購入</small></li>
+        </ul>
       </div>
-      <div class="tip-item">
-        <div class="icon">6</div>
-        <div>
-          <h3>SIM/eSIM またはWi-Fiルーター</h3>
-          <p>地図・翻訳・配車アプリ使用のため、必ずネット環境を用意してください。</p>
-        </div>
+
+      <div class="prep-card">
+        <h3>📱 必須アプリ</h3>
+        <ul>
+          <li>Uber<small>みんなで乗り合わせれば1人数百円</small></li>
+          <li>Taxi Go<small>Uberが捕まらない時の予備</small></li>
+          <li>Google Maps（オフライン地図ダウンロード）</li>
+          <li>Google翻訳 / DeepL</li>
+          <li>LINE<small>グループ連絡用</small></li>
+        </ul>
       </div>
+
+      <div class="prep-card">
+        <h3>📶 通信</h3>
+        <ul>
+          <li>eSIM<small>Airalo / Holafly が手軽</small></li>
+          <li>または Wi-Fiルーター<small>空港受取可</small></li>
+          <li>11/21の集合に必須なので必ず用意</li>
+        </ul>
+      </div>
+
+      <div class="prep-card">
+        <h3>👕 服装</h3>
+        <ul>
+          <li>長袖シャツ＋羽織り物<small>11月平均20℃前後</small></li>
+          <li>歩きやすいスニーカー<small>九份の石段は必須</small></li>
+          <li>折り畳み傘<small>11月は雨が多い</small></li>
+          <li>軽いダウンや薄手ジャケット<small>夜は冷える</small></li>
+        </ul>
+      </div>
+
+      <div class="prep-card">
+        <h3>🔌 電源・その他</h3>
+        <ul>
+          <li>変換プラグ不要<small>台湾は日本と同じAタイプ・110V</small></li>
+          <li>モバイルバッテリー</li>
+          <li>常備薬・胃腸薬<small>食べ歩きで胃が疲れる</small></li>
+          <li>ウェットティッシュ・除菌シート</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="caution-box">
+      <h3>⚠️ 気をつけること</h3>
+      <ul>
+        <li><strong>九份の石段は滑りやすい</strong> — 雨天時は特に注意。革靴・ヒールはNG。</li>
+        <li><strong>夜市の屋台選び</strong> — 行列ができている店・回転の早い店を選ぶと衛生面で安心。</li>
+        <li><strong>スリ・置き引き</strong> — 夜市・MRT満員時はバックパックは前抱きに。スマホはストラップ推奨。</li>
+        <li><strong>タクシーは正規メーター必須</strong> — 「攬客」（客引き）は避け、流しのタクシー or Uberを利用。</li>
+        <li><strong>飲食店「衛生等級」確認</strong> — 入口に貼られた優・良・甲のステッカーをチェック。</li>
+        <li><strong>11月の天気は不安定</strong> — 雨が多く、湿度70-80%。傘は常時携帯。</li>
+        <li><strong>同伴者連れの場合は事前申告</strong> — 食事会の人数調整があるため、必ず事前にお知らせください。</li>
+        <li><strong>飲酒運転は厳罰</strong> — 台湾はバイク・自転車も対象。レンタル時注意。</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -731,7 +1090,15 @@ footer .brand {
     </div>
     <div class="faq-item">
       <div class="faq-q">家族や同伴者を連れて行ってもいいですか？</div>
-      <div class="faq-a">基本的には参加者ご本人を想定していますが、同伴希望の方は事前にご相談ください（食事会の人数調整があるため）。</div>
+      <div class="faq-a"><strong>OKです！</strong> 大切なご家族・パートナーとぜひ一緒にお越しください。ただし、歓迎会・打ち上げ等の食事会は人数で予約する関係上、<strong>必ず事前に同伴者の有無と人数をお知らせください</strong>。お子様連れも歓迎ですが、九份や夜市は混雑するためベビーカーは推奨しません（抱っこ紐推奨）。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">移動はバスを借りるんですか？</div>
+      <div class="faq-a">いいえ、バスは借りません。基本的に <strong>Uberの乗り合わせ＋MRT</strong> です。Uberは4人乗ると1人あたり数百円〜千円程度におさまるので、団体移動には十分。<strong>Uberアプリは出発前に必ずインストール＆クレカ登録</strong> をしておいてください。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">ホテルはどこを予約すればいいですか？</div>
+      <div class="faq-a">上記「おすすめホテル」セクションをご覧ください。<strong>中山・台北駅・西門町</strong> の3エリアから選んでいただければOK。MRT沿線で集合場所にアクセスしやすい場所を推奨しています。</div>
     </div>
   </div>
 </section>
