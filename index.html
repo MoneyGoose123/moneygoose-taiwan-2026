@@ -597,21 +597,111 @@ footer .brand {
   overflow: hidden;
 }
 .main-event::before {
-  content: "故宮 國寶 美術";
+  content: "選 ぶ 旅";
   position: absolute;
   font-family: 'Noto Serif TC', serif;
-  font-size: 220px;
+  font-size: 240px;
   font-weight: 900;
   color: rgba(212, 160, 23, 0.04);
   top: 20px;
-  left: -60px;
-  letter-spacing: 24px;
+  left: -40px;
+  letter-spacing: 32px;
   white-space: nowrap;
   pointer-events: none;
 }
 .main-event .section-title h2 { color: var(--white); }
 .main-event .section-title .num { color: var(--gold); }
 .main-event .section-title h2::after { background: var(--gold); }
+.choose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+  position: relative;
+  z-index: 1;
+}
+.plan-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(212, 160, 23, 0.3);
+  border-radius: 12px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+}
+.plan-card .plan-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--gold);
+  color: #2c1810;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  padding: 6px 16px;
+  border-radius: 0 0 0 8px;
+}
+.plan-card .for-who {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.plan-card h3 {
+  font-size: 22px;
+  margin-bottom: 4px;
+  color: var(--white);
+  letter-spacing: 1px;
+}
+.plan-card .plan-tc {
+  font-family: 'Noto Serif TC', serif;
+  color: rgba(255,255,255,0.5);
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+.plan-card .plan-desc {
+  font-size: 14px;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 20px;
+}
+.plan-card .plan-meta {
+  font-size: 12px;
+  color: var(--gold);
+  margin-bottom: 16px;
+  border-top: 1px solid rgba(212, 160, 23, 0.2);
+  padding-top: 16px;
+  line-height: 1.8;
+}
+.plan-card .plan-meta strong { color: var(--white); display: inline-block; min-width: 60px; }
+.plan-card .plan-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+}
+.plan-card .plan-list li {
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  padding: 4px 0 4px 20px;
+  position: relative;
+  line-height: 1.6;
+}
+.plan-card .plan-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+.vs-divider {
+  text-align: center;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 32px;
+  color: var(--gold);
+  letter-spacing: 8px;
+  margin: 24px 0;
+  position: relative;
+  z-index: 1;
+}
 .me-tag {
   display: inline-block;
   background: var(--gold);
@@ -930,61 +1020,80 @@ footer .brand {
   </div>
 </section>
 
-<!-- MAIN EVENT FEATURE -->
+<!-- MAIN EVENT FEATURE - CHOOSE YOUR PATH -->
 <section class="main-event">
   <div class="container">
     <div class="section-title">
-      <span class="me-tag">MAIN EVENT</span>
+      <span class="me-tag">CHOOSE YOUR PATH</span>
       <div class="num">11/22 SUN · MORNING</div>
-      <h2>国立故宮博物院</h2>
+      <h2>2つのコースから選ぶ</h2>
     </div>
     <p class="me-lead">
-      この旅行の<span class="accent">「美術系」核となる時間</span>。<br>
-      数千年の中国美術の<span class="accent">至宝</span>を、じっくり鑑賞する。
+      美術の<span class="accent">「至宝」</span>を見るか、<br>
+      街の<span class="accent">「市井」</span>を歩くか。
     </p>
     <p class="me-sub">
-      永廣さんが「これはぜひ全員で」と推した、世界四大博物館のひとつ。<br>
-      catawikiの美術オークションの世界観と直結する、教科書で見たあの逸品の本物が並ぶ場所。<br>
-      初心者の方でも、日本語音声ガイドさえあれば、その価値と美しさに圧倒されるはずです。
+      11/22の午前中は、興味に合わせて<strong>2つのコース</strong>から自由に選んでいただけます。<br>
+      どちらも台湾の本質に触れられる体験で、12:30以降の小籠包体験で全員合流します。
     </p>
 
-    <div class="me-grid">
-      <div class="me-item">
-        <div class="me-label">DATE</div>
-        <div class="me-val">11/22（日）<br>9:00〜12:30</div>
+    <div class="choose-grid">
+      <!-- PLAN A -->
+      <div class="plan-card">
+        <span class="plan-tag">PLAN A</span>
+        <div class="for-who">FOR · CATAWIKI / 美術派</div>
+        <h3>🏛️ 国立故宮博物院</h3>
+        <div class="plan-tc">National Palace Museum</div>
+        <p class="plan-desc">
+          世界四大博物館のひとつ。数千年の中国美術の至宝が並ぶ、永廣さん推薦のメイン会場。catawikiの美術オークションの世界観と直結する、本物の逸品をじっくり鑑賞。日本語音声ガイドで初心者でも圧倒される3時間。
+        </p>
+        <div class="plan-meta">
+          <strong>時間</strong> 9:00〜12:30<br>
+          <strong>場所</strong> 士林・至善路（中山からUberで約25分）<br>
+          <strong>料金</strong> 入場 NT$350 ＋ 日本語音声ガイド NT$150
+        </div>
+        <ul class="plan-list">
+          <li>翠玉白菜（翡翠の白菜彫刻）</li>
+          <li>肉形石（瑪瑙の角煮）</li>
+          <li>毛公鼎（3000年前の青銅器）</li>
+          <li>清明上河圖（北宋の都の巻物）</li>
+          <li>多寶格・玉雕橄欖核</li>
+        </ul>
       </div>
-      <div class="me-item">
-        <div class="me-label">VENUE</div>
-        <div class="me-val">国立故宮博物院<br>士林・至善路</div>
-      </div>
-      <div class="me-item">
-        <div class="me-label">ACCESS</div>
-        <div class="me-val">各自Uberで直行<br>中山から約25分</div>
-      </div>
-      <div class="me-item">
-        <div class="me-label">FEE</div>
-        <div class="me-val">入場 NT$350<br>音声ガイド NT$150</div>
+
+      <!-- PLAN B -->
+      <div class="plan-card">
+        <span class="plan-tag">PLAN B</span>
+        <div class="for-who">FOR · EBAY / 街歩き派</div>
+        <h3>🏮 龍山寺＆迪化街・大稻埕</h3>
+        <div class="plan-tc">Longshan Temple & Dadaocheng</div>
+        <p class="plan-desc">
+          故宮の「皇帝の宝物」と対極の「<strong>市井の台湾</strong>」を歩く。台北最古の寺院・龍山寺で祈りの文化を体感し、迪化街・大稻埕で漢方・乾物・茶葉・布問屋のレトロな問屋街めぐり。<strong>eBayセラーの仕入れ目線</strong>でも観光目線でも楽しめる、生きた台北。
+        </p>
+        <div class="plan-meta">
+          <strong>時間</strong> 9:00〜12:30<br>
+          <strong>場所</strong> 龍山寺〜西門〜迪化街（MRT・徒歩）<br>
+          <strong>料金</strong> 無料（飲食・買い物は各自）
+        </div>
+        <ul class="plan-list">
+          <li>龍山寺（台北最古の寺院・線香）</li>
+          <li>西門町をぶらり北上</li>
+          <li>迪化街（漢方・乾物・布問屋・茶葉）</li>
+          <li>大稻埕埠頭・霞海城隍廟</li>
+          <li>永楽市場でローカルランチ</li>
+        </ul>
       </div>
     </div>
 
-    <div class="treasures">
-      <h3>◆ 必見の至宝（音声ガイド推奨ルート）</h3>
-      <ul>
-        <li><strong>翠玉白菜</strong>翡翠を彫り上げた清代の至宝。故宮の代名詞</li>
-        <li><strong>肉形石</strong>本物の角煮にしか見えない瑪瑙の石</li>
-        <li><strong>毛公鼎</strong>3000年前の青銅器。499文字の銘文</li>
-        <li><strong>清明上河圖</strong>北宋の都を描いた巻物の傑作</li>
-        <li><strong>多寶格</strong>清の皇帝の趣味の小箱コレクション</li>
-        <li><strong>玉雕橄欖核</strong>橄欖の種に彫られたミクロ彫刻</li>
-      </ul>
-    </div>
+    <div class="vs-divider">合 流</div>
 
-    <div style="background:rgba(212,160,23,0.1); border:1px solid rgba(212,160,23,0.3); padding:20px 24px; border-radius:10px; margin-top:24px; font-size:14px; line-height:1.9; position:relative; z-index:1;">
-      <strong style="color:var(--gold);">💡 鑑賞のコツ</strong><br>
-      ・日曜午前は混雑するため <strong>9:00開館と同時に入場</strong> が鉄則<br>
-      ・館内撮影OK（フラッシュ・三脚はNG）<br>
-      ・3階「翠玉白菜」エリアは<strong>必ず最初に</strong>。後回しにすると行列で30分待ちに<br>
-      ・館内カフェあり、ドリンク休憩しながら3時間ペースで回るのが理想
+    <div style="background:rgba(212,160,23,0.1); border:1px solid rgba(212,160,23,0.3); padding:20px 24px; border-radius:10px; font-size:14px; line-height:1.9; position:relative; z-index:1;">
+      <strong style="color:var(--gold);">💡 選び方のヒント</strong><br>
+      ・<strong>美術・歴史・骨董が好き</strong> → Plan A（故宮博物院）<br>
+      ・<strong>街歩き・グルメ・物流リサーチ</strong> → Plan B（龍山寺＋迪化街）<br>
+      ・<strong>どちらでも</strong> → カタワキメンバーは A、eBayメンバーは B が王道ですが、好みでOK<br>
+      ・<strong>事前申告</strong>：人数把握のため、出発前にどちらに参加するかお知らせください<br>
+      ・両班とも12:30に解散→各自で14:30の小籠包体験会場へ集合
     </div>
   </div>
 </section>
@@ -1084,18 +1193,22 @@ footer .brand {
       </div>
       <div class="day-body">
         <div class="event must">
-          <div class="time">9:00</div>
+          <div class="time">9:00<br><small style="font-size:10px; color:var(--gray);">A or B</small></div>
           <div class="content">
-            <div class="title">🏛️ 国立故宮博物院（メインイベント）</div>
-            <div class="desc">永廣さんが選んだ「美術系」の核となる時間。<strong>世界四大博物館のひとつ</strong>に数えられる、中国美術の至宝の宝庫。翠玉白菜・肉形石・毛公鼎など、教科書で見たあの逸品の本物がずらり。<strong>日本語音声ガイド（NT$150）必携</strong>で、初心者でもその価値と美しさに圧倒されます。catawikiの美術オークションの世界観とも直結する、3時間。</div>
-            <span class="meet">集合：故宮博物院 正面入口（各自Uberで直行）</span>
+            <div class="title">🛤 メインイベント：2コースから選択</div>
+            <div class="desc">
+              <strong style="color:var(--red);">Plan A：</strong>🏛️ 国立故宮博物院（catawiki / 美術派）<br>
+              <strong style="color:var(--red);">Plan B：</strong>🏮 龍山寺＆迪化街・大稻埕（eBay / 街歩き派）<br>
+              <span style="color:var(--gray); font-size:13px;">↑ 詳細は上記「CHOOSE YOUR PATH」セクション参照。出発前に参加コースの事前申告をお願いします。</span>
+            </div>
+            <span class="meet">集合：各コース別現地（Uberで直行）</span>
           </div>
         </div>
         <div class="event">
           <div class="time">12:30</div>
           <div class="content">
-            <div class="title">ランチ（自由 or 故宮晶華）</div>
-            <div class="desc">故宮敷地内のレストラン「<strong>故宮晶華</strong>」では、翠玉白菜・肉形石を再現した「国宝コース」が人気。各自で。あるいは士林エリアまで降りて軽めに。</div>
+            <div class="title">ランチ（各コースで自由）</div>
+            <div class="desc">Plan Aは故宮晶華の「国宝コース」が人気。Plan Bは永楽市場のローカルランチ。各自で。</div>
           </div>
         </div>
         <div class="event must">
@@ -1555,7 +1668,12 @@ footer .brand {
     </div>
     <div class="faq-item">
       <div class="faq-q">食事会・打ち上げの費用はどうなりますか？</div>
-      <div class="faq-a">想定15名規模で、<strong>食事＋故宮博物院関連の合計目安は1人あたり 24,000〜30,000円</strong>（歓迎会・九份ランチ・故宮入場＋音声ガイド・小籠包体験・火鍋打ち上げ）。航空券・ホテル・自由食事は別途各自負担です。事前集金または現地割り勘の方式は店舗確定後にご案内します。</div>
+      <div class="faq-a">想定15名規模で、<strong>食事＋メインイベント関連の合計目安は1人あたり 22,000〜30,000円</strong>（歓迎会・九份ランチ・小籠包体験・火鍋打ち上げに、Plan A選択者は故宮入場+音声ガイド NT$500〜を加算）。航空券・ホテル・自由食事は別途各自負担です。事前集金または現地割り勘の方式は店舗確定後にご案内します。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">11/22の午前は Plan A・B どちらを選べばいいですか？</div>
+      <div class="faq-a"><strong>美術・歴史・骨董に興味がある方は Plan A（故宮博物院）</strong>、<strong>街歩き・物流リサーチ・グルメに興味がある方は Plan B（龍山寺＋迪化街）</strong>がおすすめです。catawikiメンバーはAが王道、eBayメンバーはBが王道ですが、好みで自由に選んでOK。<strong>事前申告</strong>をお願いします（人数把握のため）。両コースとも12:30解散で、14:30の小籠包体験で全員合流します。</div>
+    </div>
     </div>
     <div class="faq-item">
       <div class="faq-q">アレルギーや苦手な食材があります</div>
