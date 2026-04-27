@@ -588,6 +588,127 @@ footer .brand {
 .caution-box ul { padding-left: 20px; }
 .caution-box li { font-size: 14px; margin-bottom: 8px; color: #4a3800; }
 
+/* MAIN EVENT FEATURE */
+.main-event {
+  background: linear-gradient(135deg, #2c1810 0%, #4a2818 100%);
+  color: var(--white);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+.main-event::before {
+  content: "故宮 國寶 美術";
+  position: absolute;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 220px;
+  font-weight: 900;
+  color: rgba(212, 160, 23, 0.04);
+  top: 20px;
+  left: -60px;
+  letter-spacing: 24px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.main-event .section-title h2 { color: var(--white); }
+.main-event .section-title .num { color: var(--gold); }
+.main-event .section-title h2::after { background: var(--gold); }
+.me-tag {
+  display: inline-block;
+  background: var(--gold);
+  color: #2c1810;
+  padding: 6px 18px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+.me-lead {
+  text-align: center;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 500;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+.me-lead .accent { color: var(--gold); font-weight: 700; }
+.me-sub {
+  text-align: center;
+  opacity: 0.8;
+  max-width: 640px;
+  margin: 0 auto 56px;
+  font-size: 15px;
+  line-height: 2;
+}
+.me-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+.me-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(212, 160, 23, 0.3);
+  padding: 24px;
+  border-radius: 10px;
+  text-align: center;
+}
+.me-item .me-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.me-item .me-val {
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 700;
+  line-height: 1.6;
+}
+.treasures {
+  background: rgba(255,255,255,0.04);
+  border-left: 3px solid var(--gold);
+  padding: 28px 32px;
+  border-radius: 8px;
+  margin-top: 32px;
+  position: relative;
+  z-index: 1;
+}
+.treasures h3 {
+  color: var(--gold);
+  font-size: 16px;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+.treasures ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+.treasures li {
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+  padding-left: 24px;
+  position: relative;
+}
+.treasures li::before {
+  content: "◆";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+.treasures li strong {
+  display: block;
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
 /* MARRIOTT SECTION */
 .marriott-section {
   background: linear-gradient(135deg, #0e1d3d 0%, #1a2d5e 100%);
@@ -786,14 +907,14 @@ footer .brand {
     </p>
     <div class="about-points">
       <div class="about-point">
-        <div class="ap-num">合</div>
-        <h3>2スクール合同開催</h3>
-        <p>MoneyGoose × catawiki永廣スクール。普段交わらないメンバー同士の出会いと学び。</p>
+        <div class="ap-num">藝</div>
+        <h3>美術の至宝に触れる</h3>
+        <p>世界四大博物館の故宮博物院をメインに据えた、catawiki視点の本格的アート体験。</p>
       </div>
       <div class="about-point">
         <div class="ap-num">食</div>
         <h3>本場の食を囲む</h3>
-        <p>歓迎会・九份茶藝館・打ち上げの3つの食卓で、自然と仲間が増えていきます。</p>
+        <p>歓迎会・九份茶藝館・小籠包DIY・火鍋打ち上げの食卓で、自然と仲間が増えていきます。</p>
       </div>
       <div class="about-point">
         <div class="ap-num">街</div>
@@ -805,6 +926,65 @@ footer .brand {
         <h3>自由度の高い設計</h3>
         <p>現地集合・現地解散。家族同伴OK。自分のペースでツアーを楽しめます。</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN EVENT FEATURE -->
+<section class="main-event">
+  <div class="container">
+    <div class="section-title">
+      <span class="me-tag">MAIN EVENT</span>
+      <div class="num">11/22 SUN · MORNING</div>
+      <h2>国立故宮博物院</h2>
+    </div>
+    <p class="me-lead">
+      この旅行の<span class="accent">「美術系」核となる時間</span>。<br>
+      数千年の中国美術の<span class="accent">至宝</span>を、じっくり鑑賞する。
+    </p>
+    <p class="me-sub">
+      永廣さんが「これはぜひ全員で」と推した、世界四大博物館のひとつ。<br>
+      catawikiの美術オークションの世界観と直結する、教科書で見たあの逸品の本物が並ぶ場所。<br>
+      初心者の方でも、日本語音声ガイドさえあれば、その価値と美しさに圧倒されるはずです。
+    </p>
+
+    <div class="me-grid">
+      <div class="me-item">
+        <div class="me-label">DATE</div>
+        <div class="me-val">11/22（日）<br>9:00〜12:30</div>
+      </div>
+      <div class="me-item">
+        <div class="me-label">VENUE</div>
+        <div class="me-val">国立故宮博物院<br>士林・至善路</div>
+      </div>
+      <div class="me-item">
+        <div class="me-label">ACCESS</div>
+        <div class="me-val">各自Uberで直行<br>中山から約25分</div>
+      </div>
+      <div class="me-item">
+        <div class="me-label">FEE</div>
+        <div class="me-val">入場 NT$350<br>音声ガイド NT$150</div>
+      </div>
+    </div>
+
+    <div class="treasures">
+      <h3>◆ 必見の至宝（音声ガイド推奨ルート）</h3>
+      <ul>
+        <li><strong>翠玉白菜</strong>翡翠を彫り上げた清代の至宝。故宮の代名詞</li>
+        <li><strong>肉形石</strong>本物の角煮にしか見えない瑪瑙の石</li>
+        <li><strong>毛公鼎</strong>3000年前の青銅器。499文字の銘文</li>
+        <li><strong>清明上河圖</strong>北宋の都を描いた巻物の傑作</li>
+        <li><strong>多寶格</strong>清の皇帝の趣味の小箱コレクション</li>
+        <li><strong>玉雕橄欖核</strong>橄欖の種に彫られたミクロ彫刻</li>
+      </ul>
+    </div>
+
+    <div style="background:rgba(212,160,23,0.1); border:1px solid rgba(212,160,23,0.3); padding:20px 24px; border-radius:10px; margin-top:24px; font-size:14px; line-height:1.9; position:relative; z-index:1;">
+      <strong style="color:var(--gold);">💡 鑑賞のコツ</strong><br>
+      ・日曜午前は混雑するため <strong>9:00開館と同時に入場</strong> が鉄則<br>
+      ・館内撮影OK（フラッシュ・三脚はNG）<br>
+      ・3階「翠玉白菜」エリアは<strong>必ず最初に</strong>。後回しにすると行列で30分待ちに<br>
+      ・館内カフェあり、ドリンク休憩しながら3時間ペースで回るのが理想
     </div>
   </div>
 </section>
@@ -899,30 +1079,45 @@ footer .brand {
     <!-- DAY 3 -->
     <div class="day">
       <div class="day-header">
-        <div class="date">11月22日 <span class="small">（日） DAY 3</span></div>
-        <span class="label">台北 DAY</span>
+        <div class="date">11月22日 <span class="small">（日） MAIN DAY</span></div>
+        <span class="label">美術 × 食 × 交流</span>
       </div>
       <div class="day-body">
-        <div class="event optional">
-          <div class="time">午前</div>
+        <div class="event must">
+          <div class="time">9:00</div>
           <div class="content">
-            <div class="title">自由行動</div>
-            <div class="desc">小籠包ランチ・寺院（龍山寺）・お茶・マッサージなど、各自お好みでどうぞ。</div>
+            <div class="title">🏛️ 国立故宮博物院（メインイベント）</div>
+            <div class="desc">永廣さんが選んだ「美術系」の核となる時間。<strong>世界四大博物館のひとつ</strong>に数えられる、中国美術の至宝の宝庫。翠玉白菜・肉形石・毛公鼎など、教科書で見たあの逸品の本物がずらり。<strong>日本語音声ガイド（NT$150）必携</strong>で、初心者でもその価値と美しさに圧倒されます。catawikiの美術オークションの世界観とも直結する、3時間。</div>
+            <span class="meet">集合：故宮博物院 正面入口（各自Uberで直行）</span>
+          </div>
+        </div>
+        <div class="event">
+          <div class="time">12:30</div>
+          <div class="content">
+            <div class="title">ランチ（自由 or 故宮晶華）</div>
+            <div class="desc">故宮敷地内のレストラン「<strong>故宮晶華</strong>」では、翠玉白菜・肉形石を再現した「国宝コース」が人気。各自で。あるいは士林エリアまで降りて軽めに。</div>
           </div>
         </div>
         <div class="event must">
-          <div class="time">14:00</div>
+          <div class="time">14:30</div>
           <div class="content">
             <div class="title">🥟 小籠包・餃子づくり体験</div>
-            <div class="desc">MoneyGoose × catawiki 合同の交流コンテンツ。粉をこねて、皮を伸ばして、具を包んで、自分で作った小籠包を蒸して食べる。手を動かしながら自然と仲良くなれる、台湾でしか味わえない体験です。所要約2〜3時間。</div>
+            <div class="desc">MoneyGoose × catawiki 合同の交流コンテンツ。粉をこねて、皮を伸ばして、具を包んで、自分で作った小籠包を蒸して食べる。<strong>美術鑑賞のあとは「手を動かす」時間</strong>で自然と打ち解ける流れ。所要約2.5時間。</div>
             <span class="meet">集合：料理教室現地（詳細は別途）</span>
+          </div>
+        </div>
+        <div class="event optional">
+          <div class="time">17:30</div>
+          <div class="content">
+            <div class="title">休憩・自由時間</div>
+            <div class="desc">ホテル戻り or カフェで小休止。火鍋に備える。</div>
           </div>
         </div>
         <div class="event must">
           <div class="time">19:00</div>
           <div class="content">
             <div class="title">🍲 火鍋ディナー（打ち上げ）</div>
-            <div class="desc">台湾流の「みんなで囲む」打ち上げ。鍋を囲んで具材を入れ合い、3時間しゃべり倒すのが台湾スタイル。3日間の総まとめ＆乾杯！個室を確保して、ゆっくり交流できる空間を用意します。</div>
+            <div class="desc">台湾流の「みんなで囲む」打ち上げ。鍋を囲んで具材を入れ合い、3時間しゃべり倒すのが台湾スタイル。3日間の総まとめ＆乾杯！VIP個室を確保して、ゆっくり交流できる空間を用意します。</div>
             <span class="meet">集合：レストラン現地（詳細は別途）</span>
           </div>
         </div>
@@ -1360,7 +1555,7 @@ footer .brand {
     </div>
     <div class="faq-item">
       <div class="faq-q">食事会・打ち上げの費用はどうなりますか？</div>
-      <div class="faq-a">想定15名規模で、<strong>食事関連の合計目安は1人あたり 22,000〜28,000円</strong>（歓迎会・九份ランチ・小籠包体験・火鍋打ち上げの4つ合計）。航空券・ホテル・自由食事は別途各自負担です。事前集金または現地割り勘の方式は店舗確定後にご案内します。</div>
+      <div class="faq-a">想定15名規模で、<strong>食事＋故宮博物院関連の合計目安は1人あたり 24,000〜30,000円</strong>（歓迎会・九份ランチ・故宮入場＋音声ガイド・小籠包体験・火鍋打ち上げ）。航空券・ホテル・自由食事は別途各自負担です。事前集金または現地割り勘の方式は店舗確定後にご案内します。</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">アレルギーや苦手な食材があります</div>
