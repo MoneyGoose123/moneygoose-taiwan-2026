@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MoneyGoose × catawiki 台湾合同ツアー 2026.11</title>
+<meta name="description" content="2026年11月20日〜23日 台北を中心とした初心者向け合同ツアー">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --red: #c8102e;
+  --red-deep: #8b0000;
+  --gold: #d4a017;
+  --cream: #fdf6e3;
+  --ink: #1a1a1a;
+  --gray: #6b7280;
+  --light: #f5f0e1;
+  --white: #ffffff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.7;
+  font-size: 16px;
+}
+h1, h2, h3 { font-weight: 700; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--red) 0%, var(--red-deep) 100%);
+  color: var(--white);
+  padding: 80px 24px 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "燈籠 茶 夜市 九份";
+  position: absolute;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 280px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.04);
+  top: -40px;
+  left: -100px;
+  letter-spacing: 30px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.hero-tag {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--ink);
+  padding: 6px 18px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: clamp(32px, 6vw, 56px);
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.hero h1 .tw {
+  font-family: 'Noto Serif TC', serif;
+  display: block;
+  font-size: 0.5em;
+  color: var(--gold);
+  margin-top: 12px;
+  letter-spacing: 8px;
+}
+.hero-date {
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+.hero-co {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+}
+.hero-co .x { color: var(--gold); font-size: 24px; }
+
+/* CONTAINER */
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* SECTION */
+.section {
+  padding: 80px 0;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-title .num {
+  display: inline-block;
+  font-family: 'Noto Serif TC', serif;
+  font-size: 14px;
+  color: var(--red);
+  letter-spacing: 6px;
+  margin-bottom: 8px;
+}
+.section-title h2 {
+  font-size: clamp(26px, 4vw, 36px);
+  letter-spacing: 2px;
+}
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--red);
+  margin: 16px auto 0;
+}
+
+/* OVERVIEW CARDS */
+.overview {
+  background: var(--white);
+  margin-top: -60px;
+  position: relative;
+  z-index: 2;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+}
+.ov-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+}
+.ov-item {
+  text-align: center;
+  padding: 16px;
+  border-right: 1px solid #eee;
+}
+.ov-item:last-child { border-right: none; }
+.ov-item .label {
+  font-size: 12px;
+  color: var(--gray);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.ov-item .value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--red);
+}
+@media (max-width: 700px) {
+  .ov-item { border-right: none; border-bottom: 1px solid #eee; padding-bottom: 16px; }
+  .ov-item:last-child { border-bottom: none; padding-bottom: 0; }
+}
+
+/* TIMELINE / DAYS */
+.day {
+  background: var(--white);
+  border-radius: 16px;
+  margin-bottom: 32px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border-top: 6px solid var(--red);
+}
+.day-header {
+  padding: 24px 32px;
+  background: linear-gradient(to right, #fff 0%, #fef5f0 100%);
+  border-bottom: 1px dashed #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.day-header .date {
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--red);
+  letter-spacing: 1px;
+}
+.day-header .date .small { font-size: 14px; color: var(--gray); margin-left: 8px; }
+.day-header .label {
+  background: var(--gold);
+  color: var(--ink);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.day-body { padding: 24px 32px; }
+.event {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.event:last-child { border-bottom: none; }
+.event .time {
+  font-weight: 700;
+  color: var(--red);
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+.event .content .title {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+.event .content .desc {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.6;
+}
+.event .content .meet {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 12px;
+  background: #fef5f0;
+  color: var(--red-deep);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.event.optional .content .title::before {
+  content: "OPT";
+  display: inline-block;
+  background: var(--gray);
+  color: var(--white);
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-right: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.event.must .content .title::before {
+  content: "MUST";
+  display: inline-block;
+  background: var(--red);
+  color: var(--white);
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-right: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+@media (max-width: 600px) {
+  .event { grid-template-columns: 1fr; gap: 6px; }
+  .event .time { font-size: 14px; }
+}
+
+/* RESTAURANT */
+.rest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+.rest-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border-left: 4px solid var(--gold);
+  transition: transform 0.2s;
+}
+.rest-card:hover { transform: translateY(-4px); }
+.rest-card .when {
+  font-size: 12px;
+  color: var(--red);
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.rest-card h3 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+.rest-card .tc {
+  font-family: 'Noto Serif TC', serif;
+  color: var(--gray);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.rest-card .info {
+  font-size: 14px;
+  color: var(--gray);
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #ddd;
+}
+.rest-card .badge {
+  display: inline-block;
+  background: var(--cream);
+  color: var(--red-deep);
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 100px;
+  margin-top: 8px;
+  margin-right: 4px;
+  font-weight: 600;
+}
+
+/* TIPS */
+.tips {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.tip-item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: start;
+}
+.tip-item:last-child { border-bottom: none; }
+.tip-item .icon {
+  width: 40px;
+  height: 40px;
+  background: var(--red);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 18px;
+}
+.tip-item h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+.tip-item p {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+/* FAQ */
+.faq-item {
+  background: var(--white);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+.faq-q {
+  padding: 20px 28px;
+  cursor: pointer;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-q::after {
+  content: "+";
+  color: var(--red);
+  font-size: 24px;
+  font-weight: 300;
+}
+.faq-item.open .faq-q::after { content: "−"; }
+.faq-a {
+  padding: 0 28px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+  color: var(--gray);
+  font-size: 14px;
+}
+.faq-item.open .faq-a {
+  padding: 0 28px 24px;
+  max-height: 300px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--ink);
+  color: var(--white);
+  text-align: center;
+  padding: 40px 24px;
+}
+footer p { opacity: 0.6; font-size: 13px; letter-spacing: 1px; }
+footer .brand {
+  font-family: 'Noto Serif TC', serif;
+  color: var(--gold);
+  font-size: 18px;
+  margin-bottom: 12px;
+  letter-spacing: 4px;
+}
+
+/* SECTION COLORS */
+.section-light { background: var(--light); }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <span class="hero-tag">PARTICIPANTS GUIDE</span>
+  <h1>
+    台湾合同ツアー
+    <span class="tw">台北 · 九份 · 夜市</span>
+  </h1>
+  <p class="hero-date">2026.11.20 FRI − 11.23 MON</p>
+  <div class="hero-co">
+    <span>MoneyGoose</span>
+    <span class="x">×</span>
+    <span>catawiki 永廣スクール</span>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<div class="container">
+  <div class="overview">
+    <div class="ov-grid">
+      <div class="ov-item">
+        <div class="label">DURATION</div>
+        <div class="value">3泊4日</div>
+      </div>
+      <div class="ov-item">
+        <div class="label">BASE</div>
+        <div class="value">台北市内</div>
+      </div>
+      <div class="ov-item">
+        <div class="label">STYLE</div>
+        <div class="value">現地集合・現地解散</div>
+      </div>
+      <div class="ov-item">
+        <div class="label">LEVEL</div>
+        <div class="value">初心者歓迎</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCHEDULE -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <div class="num">SCHEDULE</div>
+      <h2>4日間のスケジュール</h2>
+    </div>
+
+    <!-- DAY 1 -->
+    <div class="day">
+      <div class="day-header">
+        <div class="date">11月20日 <span class="small">（金） DAY 1</span></div>
+        <span class="label">到着・歓迎</span>
+      </div>
+      <div class="day-body">
+        <div class="event">
+          <div class="time">終日</div>
+          <div class="content">
+            <div class="title">各自台北到着・ホテルチェックイン</div>
+            <div class="desc">ホテルは各自で予約してください。中山・台北駅・西門町エリア推奨（MRT便利）。</div>
+          </div>
+        </div>
+        <div class="event optional">
+          <div class="time">15:00</div>
+          <div class="content">
+            <div class="title">迪化街さんぽツアー</div>
+            <div class="desc">早着組向け。レトロな問屋街でお茶・カラスミ・乾物の試食めぐり。徒歩中心で疲れません。</div>
+            <span class="meet">集合：永楽市場 入口</span>
+          </div>
+        </div>
+        <div class="event must">
+          <div class="time">19:00</div>
+          <div class="content">
+            <div class="title">歓迎食事会</div>
+            <div class="desc">台湾料理の老舗にて。円卓を囲んで自己紹介＆乾杯。</div>
+            <span class="meet">集合：レストラン現地（詳細は別途）</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day">
+      <div class="day-header">
+        <div class="date">11月21日 <span class="small">（土） DAY 2</span></div>
+        <span class="label">九份 DAY</span>
+      </div>
+      <div class="day-body">
+        <div class="event must">
+          <div class="time">11:00</div>
+          <div class="content">
+            <div class="title">台北駅 集合</div>
+            <div class="desc">朝到着組はホテルに荷物を置いてから直行OK。間に合わない方は瑞芳駅で合流可能です。</div>
+            <span class="meet">集合：台北車站 東3門・台鐵改札前</span>
+          </div>
+        </div>
+        <div class="event">
+          <div class="time">11:30</div>
+          <div class="content">
+            <div class="title">台鉄で瑞芳駅へ移動（約40分）</div>
+            <div class="desc">瑞芳駅からバスまたはタクシーで九份老街へ。</div>
+          </div>
+        </div>
+        <div class="event must">
+          <div class="time">13:00</div>
+          <div class="content">
+            <div class="title">九份ランチ＆散策</div>
+            <div class="desc">『千と千尋の神隠し』のモデルとなった茶藝館で台湾茶＆軽食。赤提灯の階段、老街グルメ、眺望スポットめぐり。</div>
+          </div>
+        </div>
+        <div class="event">
+          <div class="time">17:00頃</div>
+          <div class="content">
+            <div class="title">提灯点灯タイム → 下山</div>
+            <div class="desc">夕暮れの提灯ライトアップを楽しんで台北へ戻ります。</div>
+          </div>
+        </div>
+        <div class="event optional">
+          <div class="time">19:30〜</div>
+          <div class="content">
+            <div class="title">台北戻り・自由解散</div>
+            <div class="desc">夕食は各自自由。希望者で軽く2次会も可。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day">
+      <div class="day-header">
+        <div class="date">11月22日 <span class="small">（日） DAY 3</span></div>
+        <span class="label">台北 DAY</span>
+      </div>
+      <div class="day-body">
+        <div class="event optional">
+          <div class="time">午前</div>
+          <div class="content">
+            <div class="title">自由行動</div>
+            <div class="desc">小籠包ランチ・寺院（龍山寺）・お茶・マッサージなど、各自お好みでどうぞ。</div>
+          </div>
+        </div>
+        <div class="event must">
+          <div class="time">14:00</div>
+          <div class="content">
+            <div class="title">MoneyGoose × catawiki 交流コンテンツ</div>
+            <div class="desc">合同イベント・ワークショップ。詳細は追ってご案内します。</div>
+            <span class="meet">集合：会場現地（詳細は別途）</span>
+          </div>
+        </div>
+        <div class="event must">
+          <div class="time">19:00</div>
+          <div class="content">
+            <div class="title">打ち上げディナー</div>
+            <div class="desc">3日間の総まとめ＆乾杯。みんなで小籠包を囲む夜。</div>
+            <span class="meet">集合：レストラン現地（詳細は別途）</span>
+          </div>
+        </div>
+        <div class="event optional">
+          <div class="time">21:00〜</div>
+          <div class="content">
+            <div class="title">饒河街夜市（希望者）</div>
+            <div class="desc">縦長で歩きやすい人気夜市。胡椒餅・牡蠣オムレツなど食べ歩き。自由解散。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day">
+      <div class="day-header">
+        <div class="date">11月23日 <span class="small">（月） DAY 4</span></div>
+        <span class="label">自由解散</span>
+      </div>
+      <div class="day-body">
+        <div class="event">
+          <div class="time">終日</div>
+          <div class="content">
+            <div class="title">各自チェックアウト・帰国</div>
+            <div class="desc">公式イベントはありません。フライト時刻に合わせて、自由に観光・ショッピング・お土産購入をお楽しみください。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RESTAURANTS -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-title">
+      <div class="num">RESTAURANTS</div>
+      <h2>食事処（予定）</h2>
+    </div>
+    <div class="rest-grid">
+      <div class="rest-card">
+        <div class="when">11/20（金） 19:00</div>
+        <h3>歓迎食事会</h3>
+        <div class="tc">欣葉 台菜</div>
+        <p>台湾料理の老舗。円卓・団体実績多数で初日の自己紹介にも最適。MRT中山駅から徒歩圏内。</p>
+        <div class="info">
+          <span class="badge">台湾料理</span>
+          <span class="badge">円卓</span>
+          <span class="badge">団体OK</span>
+        </div>
+      </div>
+
+      <div class="rest-card">
+        <div class="when">11/21（土） 13:00</div>
+        <h3>九份ランチ</h3>
+        <div class="tc">阿妹茶樓 / 九份茶坊</div>
+        <p>『千と千尋』モデルの茶藝館。台湾茶と軽食、絶景の眺望席で九份の世界観を満喫。</p>
+        <div class="info">
+          <span class="badge">茶藝館</span>
+          <span class="badge">眺望席</span>
+          <span class="badge">写真映え</span>
+        </div>
+      </div>
+
+      <div class="rest-card">
+        <div class="when">11/22（日） 19:00</div>
+        <h3>打ち上げディナー</h3>
+        <div class="tc">鼎泰豐 / 點水樓</div>
+        <p>台湾といえばの小籠包。初心者から上級者まで満足できる定番。乾杯と挨拶の場として個室調整中。</p>
+        <div class="info">
+          <span class="badge">小籠包</span>
+          <span class="badge">定番</span>
+          <span class="badge">個室調整中</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TIPS -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <div class="num">PRACTICAL TIPS</div>
+      <h2>持ち物・事前準備</h2>
+    </div>
+    <div class="tips">
+      <div class="tip-item">
+        <div class="icon">1</div>
+        <div>
+          <h3>ホテルは各自予約</h3>
+          <p>推奨エリア：中山・台北駅・西門町。MRTで集合場所にアクセスしやすく、夜市にも近いです。</p>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="icon">2</div>
+        <div>
+          <h3>悠遊カード（EasyCard）を空港で購入</h3>
+          <p>桃園空港・松山空港のコンビニで購入可能。MRT・バス・コンビニで使える必須ICカード。</p>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="icon">3</div>
+        <div>
+          <h3>移動アプリのインストール</h3>
+          <p>Uber と Taxi Go を事前にインストール推奨。市内移動はMRT＋Uberが基本。</p>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="icon">4</div>
+        <div>
+          <h3>11/21は11:00台北駅集合</h3>
+          <p>朝便で到着の方は荷物をホテルに置いてから直行できます。遅れる場合は瑞芳駅で合流可。</p>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="icon">5</div>
+        <div>
+          <h3>服装：歩きやすい靴必須</h3>
+          <p>九份は石段が多く滑りやすいため、スニーカー推奨。11月の台北は20℃前後で長袖＋羽織り物が安心。</p>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="icon">6</div>
+        <div>
+          <h3>SIM/eSIM またはWi-Fiルーター</h3>
+          <p>地図・翻訳・配車アプリ使用のため、必ずネット環境を用意してください。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section section-light">
+  <div class="container">
+    <div class="section-title">
+      <div class="num">FAQ</div>
+      <h2>よくある質問</h2>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">11/21の朝便で到着予定。九份ツアーに間に合いますか？</div>
+      <div class="faq-a">桃園空港から台北駅まではMRTで約35分です。9:30までに空港着であれば11:00集合に間に合います。それ以降の到着の場合は、瑞芳駅で合流いただくか、九份の茶藝館まで直接お越しください。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">食事会・打ち上げの費用はどうなりますか？</div>
+      <div class="faq-a">店舗確定後、参加人数に応じて1人あたりの目安金額をご案内します。事前集金または現地での割り勘いずれかになります。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">アレルギーや苦手な食材があります</div>
+      <div class="faq-a">予約前にヒアリングフォームをお送りしますので、必ず事前にお知らせください。可能な範囲でメニュー調整します。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">11/23に観光したい場合のおすすめは？</div>
+      <div class="faq-a">フライト時刻次第ですが、午前中なら龍山寺・中正紀念堂・故宮博物院、お土産購入なら微風南山・三越信義新天地などが定番です。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">家族や同伴者を連れて行ってもいいですか？</div>
+      <div class="faq-a">基本的には参加者ご本人を想定していますが、同伴希望の方は事前にご相談ください（食事会の人数調整があるため）。</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="brand">台湾 2026</div>
+  <p>MoneyGoose × catawiki 永廣スクール 合同ツアー</p>
+  <p>© 2026 MoneyGoose. All Rights Reserved.</p>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    item.classList.toggle('open');
+  });
+});
+</script>
+</body>
+</html>
