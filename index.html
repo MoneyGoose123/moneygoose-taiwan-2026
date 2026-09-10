@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MoneyGoose × catawiki 台湾合同ツアー 2026.11</title>
-<meta name="description" content="2026年11月20日〜23日 台北を中心とした初心者向け合同ツアー">
+<meta name="description" content="2026年11月20日〜23日 MoneyGoose × catawiki 台湾合同ツアーの旅のしおり。集合場所・移動・緊急連絡先・持ち物チェックリストまで。">
+<meta name="theme-color" content="#c8102e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
@@ -930,13 +933,162 @@ footer .brand {
   line-height: 1.9;
   color: rgba(255,255,255,0.85);
 }
+
+/* ============ v2 : しおりモード ============ */
+.topbar{position:sticky;top:0;z-index:80;background:rgba(20,20,20,.97);backdrop-filter:blur(10px);
+  display:flex;align-items:center;gap:7px;padding:9px 12px;overflow-x:auto;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;box-shadow:0 2px 14px rgba(0,0,0,.25)}
+.topbar::-webkit-scrollbar{display:none}
+.topbar .tb-logo{font-family:'Noto Serif TC',serif;color:var(--gold);font-weight:900;
+  letter-spacing:2px;font-size:14px;white-space:nowrap;margin-right:2px}
+.topbar a{color:#fff;text-decoration:none;font-size:12.5px;font-weight:700;white-space:nowrap;
+  padding:7px 13px;border-radius:100px;background:rgba(255,255,255,.12);transition:.2s}
+.topbar a:hover{background:rgba(255,255,255,.24)}
+.topbar a.sos{background:var(--red)}
+.topbar a.sos:hover{background:#e01a3c}
+
+.nowbar{background:linear-gradient(135deg,var(--red) 0%,var(--red-deep) 100%);color:#fff;
+  padding:16px 20px;text-align:center;border-bottom:3px solid var(--gold)}
+.nowbar .lbl{font-size:10.5px;letter-spacing:3px;color:var(--gold);font-weight:700}
+.nowbar .main{font-size:clamp(16px,4.2vw,21px);font-weight:700;margin-top:5px;line-height:1.4}
+.nowbar .sub{font-size:12.5px;opacity:.88;margin-top:5px}
+.nowbar a{color:#fff}
+
+.daytabs{display:flex;gap:8px;overflow-x:auto;padding:2px 0 10px;margin-bottom:26px;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.daytabs::-webkit-scrollbar{display:none}
+.daytabs button{flex:0 0 auto;font-family:inherit;font-weight:700;font-size:13px;cursor:pointer;
+  padding:9px 17px;border-radius:100px;border:2px solid rgba(0,0,0,.12);background:var(--white);color:var(--ink)}
+.daytabs button.on{background:var(--red);border-color:var(--red);color:#fff}
+.daytabs button .d{display:block;font-size:10px;font-weight:500;opacity:.7;letter-spacing:1px}
+.day[hidden]{display:none}
+
+/* 集合場所カード */
+.pt-list{display:grid;gap:16px}
+.pt{background:var(--white);border-radius:14px;padding:20px 22px;border-left:5px solid var(--gold);
+  box-shadow:0 2px 12px rgba(0,0,0,.05)}
+.pt.key{border-left-color:var(--red)}
+.pt-when{font-size:11.5px;font-weight:700;letter-spacing:1.5px;color:var(--red)}
+.pt h3{font-size:17px;margin:5px 0 2px;line-height:1.4}
+.pt .tc{font-family:'Noto Serif TC',serif;color:var(--gray);font-size:13.5px;margin-bottom:12px}
+.pt dl{display:grid;grid-template-columns:66px 1fr;gap:7px 12px;font-size:13.5px;margin:0}
+.pt dt{color:var(--gray);font-weight:700;font-size:11.5px;padding-top:3px;letter-spacing:1px}
+.pt dd{margin:0;word-break:break-word}
+.pt dd .cn{font-family:'Noto Serif TC',serif}
+.pt-act{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}
+.pt-act a{font-size:12.5px;font-weight:700;text-decoration:none;padding:9px 15px;border-radius:100px;
+  background:var(--ink);color:#fff}
+.pt-act a.tel{background:var(--red)}
+.pt-act a.web{background:var(--gray)}
+.pt-note{margin-top:12px;font-size:12.5px;background:#fff8e1;border-left:3px solid var(--gold);
+  padding:9px 13px;border-radius:6px;color:#4a3800}
+
+/* 移動マニュアル */
+.route{background:var(--white);border-radius:14px;padding:22px;margin-bottom:16px;
+  box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.route h3{font-size:16px;margin-bottom:6px;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.route h3 .pin{background:var(--red);color:#fff;font-size:11px;padding:3px 10px;border-radius:100px;
+  letter-spacing:1px;font-weight:700}
+.route .meta{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 12px}
+.route .meta span{font-size:11.5px;background:var(--light);padding:5px 11px;border-radius:100px;font-weight:700}
+.route ol,.route ul{padding-left:20px;font-size:14px}
+.route li{margin-bottom:7px}
+.route li b{color:var(--red-deep)}
+
+/* チェックリスト */
+.prep-card ul.chk li{padding-left:0}
+.prep-card ul.chk li::before{content:none}
+.prep-card ul.chk label{display:flex;gap:11px;align-items:flex-start;cursor:pointer}
+.prep-card ul.chk input{margin-top:4px;width:19px;height:19px;flex:0 0 auto;accent-color:var(--red);cursor:pointer}
+.prep-card ul.chk input:checked+span{opacity:.4;text-decoration:line-through}
+.chk-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;
+  background:var(--white);border-radius:12px;padding:14px 20px;margin-bottom:20px;
+  box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.chk-bar .txt{font-size:13.5px;font-weight:700}
+.chk-bar .txt b{color:var(--red);font-size:17px}
+.chk-bar button{font-family:inherit;font-size:12px;font-weight:700;cursor:pointer;padding:7px 14px;
+  border-radius:100px;border:2px solid rgba(0,0,0,.12);background:transparent;color:var(--gray)}
+.chk-prog{height:6px;background:rgba(0,0,0,.08);border-radius:100px;overflow:hidden;width:100%;margin-top:8px}
+.chk-prog i{display:block;height:100%;background:var(--red);border-radius:100px;transition:.3s}
+
+/* 緊急連絡先 */
+.sos-section{background:#1a1a1a;color:#fff;padding:80px 0}
+.sos-section .section-title h2{color:#fff}
+.sos-section .section-title .num{background:var(--red);color:#fff}
+.sos-section .section-title p{color:rgba(255,255,255,.6)}
+.sos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px}
+.sos-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:22px}
+.sos-card h3{font-size:15px;color:var(--gold);margin-bottom:14px;letter-spacing:1px}
+.sos-row{display:flex;justify-content:space-between;align-items:center;gap:12px;
+  padding:11px 0;border-bottom:1px solid rgba(255,255,255,.09)}
+.sos-row:last-child{border-bottom:0}
+.sos-row .n{font-size:13.5px;line-height:1.45}
+.sos-row .n small{display:block;color:rgba(255,255,255,.5);font-size:11.5px}
+.sos-row a.num{flex:0 0 auto;background:var(--red);color:#fff;text-decoration:none;font-weight:700;
+  font-size:13px;padding:8px 14px;border-radius:100px;white-space:nowrap}
+.sos-row .num.plain{flex:0 0 auto;font-weight:700;font-size:13px;color:var(--gold);white-space:nowrap}
+.sos-fill{background:rgba(212,160,23,.14);border:1px dashed var(--gold);border-radius:10px;
+  padding:13px 16px;font-size:12.5px;color:#ffe9b0;margin-top:18px}
+
+/* フレーズ集 */
+.ph-group{margin-bottom:26px}
+.ph-group>h3{font-size:15px;color:var(--red);margin-bottom:12px;letter-spacing:1px;
+  border-left:4px solid var(--red);padding-left:11px}
+.ph{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px;background:var(--white);border-radius:10px;
+  padding:14px 18px;margin-bottom:9px;box-shadow:0 1px 6px rgba(0,0,0,.04);align-items:center}
+.ph .jp{font-size:13.5px;font-weight:700}
+.ph .cn{font-family:'Noto Serif TC',serif;font-size:16px;color:var(--red-deep);text-align:right}
+.ph .yomi{font-size:11.5px;color:var(--gray);grid-column:2;text-align:right}
+@media(max-width:520px){
+  .ph{grid-template-columns:1fr}
+  .ph .cn,.ph .yomi{text-align:left;grid-column:1}
+  .ph .cn{margin-top:4px}
+}
+
+/* お土産 */
+.omi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.omi{background:var(--white);border-radius:12px;padding:18px 20px;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.omi .rank{font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--gold)}
+.omi h3{font-size:15.5px;margin:3px 0 6px}
+.omi p{font-size:13px;color:var(--gray);line-height:1.65}
+.omi .buy{margin-top:10px;font-size:12px;background:var(--light);border-radius:6px;padding:8px 11px}
+.omi .buy b{color:var(--red-deep)}
+
+.mini-note{font-size:12.5px;color:var(--gray);text-align:center;margin-top:26px;line-height:1.8}
+
+@media print{
+  .topbar,.nowbar,.daytabs,.chk-bar button{display:none!important}
+  .day[hidden]{display:block!important}
+  .section{padding:24px 0!important;break-inside:avoid}
+  body{font-size:11pt}
+}
+
 </style>
 </head>
 <body>
 
+<!-- ===== v2 : TOPBAR ===== -->
+<div class="topbar">
+  <span class="tb-logo">台湾 2026</span>
+  <a href="#schedule">日程</a>
+  <a href="#meet">集合場所</a>
+  <a href="#access">移動</a>
+  <a href="#check">持ち物</a>
+  <a href="#phrase">中国語</a>
+  <a href="#sos" class="sos">緊急</a>
+</div>
+
+<!-- ===== v2 : NOW BAR ===== -->
+<div class="nowbar" id="nowbar">
+  <div class="lbl" id="nb-lbl">NEXT</div>
+  <div class="main" id="nb-main">読み込み中…</div>
+  <div class="sub" id="nb-sub"></div>
+</div>
+
+
 <!-- HERO -->
 <section class="hero">
-  <span class="hero-tag">PARTICIPANTS GUIDE</span>
+  <span class="hero-tag">旅のしおり ・ TRAVEL HANDBOOK</span>
   <h1>
     台湾合同ツアー
     <span class="tw">台北 · 九份 · 夜市</span>
@@ -1099,11 +1251,19 @@ footer .brand {
 </section>
 
 <!-- SCHEDULE -->
-<section class="section">
+<section class="section" id="schedule">
   <div class="container">
     <div class="section-title">
       <div class="num">SCHEDULE</div>
       <h2>4日間のスケジュール</h2>
+    </div>
+
+    <div class="daytabs" id="daytabs">
+      <button data-day="all" class="on">全日程</button>
+      <button data-day="0">DAY 1<span class="d">11/20 金</span></button>
+      <button data-day="1">DAY 2<span class="d">11/21 土</span></button>
+      <button data-day="2">DAY 3<span class="d">11/22 日</span></button>
+      <button data-day="3">DAY 4<span class="d">11/23 月</span></button>
     </div>
 
     <!-- DAY 1 -->
@@ -1125,7 +1285,7 @@ footer .brand {
           <div class="content">
             <div class="title">迪化街さんぽツアー</div>
             <div class="desc">早着組向け。レトロな問屋街でお茶・カラスミ・乾物の試食めぐり。徒歩中心で疲れません。</div>
-            <span class="meet">集合：永楽市場 入口</span>
+            <span class="meet">集合：永樂市場 入口（迪化街一段21號）</span>
           </div>
         </div>
         <div class="event must">
@@ -1133,7 +1293,7 @@ footer .brand {
           <div class="content">
             <div class="title">歓迎食事会</div>
             <div class="desc">台湾料理の老舗にて。円卓を囲んで自己紹介＆乾杯。</div>
-            <span class="meet">集合：レストラン現地（詳細は別途）</span>
+            <span class="meet">集合：欣葉台菜 南西店（新光三越 南西1館 8F・MRT中山駅直結）</span>
           </div>
         </div>
       </div>
@@ -1151,7 +1311,7 @@ footer .brand {
           <div class="content">
             <div class="title">台北駅 集合</div>
             <div class="desc">朝到着組はホテルに荷物を置いてから直行OK。間に合わない方は瑞芳駅で合流可能です。</div>
-            <span class="meet">集合：台北車站 東3門・台鐵改札前</span>
+            <span class="meet">集合：台北車站 東3門・台鐵改札前（北平西路3號）</span>
           </div>
         </div>
         <div class="event">
@@ -1216,7 +1376,7 @@ footer .brand {
           <div class="content">
             <div class="title">🥟 小籠包・餃子づくり体験</div>
             <div class="desc">MoneyGoose × catawiki 合同の交流コンテンツ。粉をこねて、皮を伸ばして、具を包んで、自分で作った小籠包を蒸して食べる。<strong>美術鑑賞のあとは「手を動かす」時間</strong>で自然と打ち解ける流れ。所要約2.5時間。</div>
-            <span class="meet">集合：料理教室現地（詳細は別途）</span>
+            <span class="meet">集合：CookInn Taiwan 中山教室（承德路一段66號 2F）</span>
           </div>
         </div>
         <div class="event optional">
@@ -1231,7 +1391,7 @@ footer .brand {
           <div class="content">
             <div class="title">🍲 火鍋ディナー（打ち上げ）</div>
             <div class="desc">台湾流の「みんなで囲む」打ち上げ。鍋を囲んで具材を入れ合い、3時間しゃべり倒すのが台湾スタイル。3日間の総まとめ＆乾杯！VIP個室を確保して、ゆっくり交流できる空間を用意します。</div>
-            <span class="meet">集合：レストラン現地（詳細は別途）</span>
+            <span class="meet">集合：問鼎麻辣鍋 忠孝店（忠孝東路四段210號 2F・忠孝敦化駅3番出口）</span>
           </div>
         </div>
         <div class="event optional">
@@ -1264,18 +1424,242 @@ footer .brand {
   </div>
 </section>
 
+
+<!-- ===== v2 : MEETING POINTS ===== -->
+<section class="section section-light" id="meet">
+  <div class="container">
+    <div class="section-title">
+      <div class="num">MEETING POINTS</div>
+      <h2>集合場所ぜんぶ</h2>
+      <p>タクシー・Uberの運転手には<strong>中国語表記を見せる</strong>のが確実です。地図ボタンでそのままナビが開きます。</p>
+    </div>
+
+    <div class="pt-list">
+
+      <div class="pt">
+        <div class="pt-when">11/20（金） 15:00 ・ 任意参加</div>
+        <h3>迪化街さんぽ 集合</h3>
+        <div class="tc">永樂市場（永楽市場）入口</div>
+        <dl>
+          <dt>住所</dt><dd class="cn">台北市大同區迪化街一段21號</dd>
+          <dt>最寄り</dt><dd>MRT松山新店線「北門」駅 3番出口 徒歩10分／MRT「中山」駅 徒歩15分</dd>
+          <dt>目印</dt><dd>1階が布市場になっている大きな四角いビル。その正面入口。</dd>
+        </dl>
+        <div class="pt-act">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=永樂市場">🗺 地図をひらく</a>
+        </div>
+      </div>
+
+      <div class="pt key">
+        <div class="pt-when">11/20（金） 19:00 ・ 全員</div>
+        <h3>歓迎食事会</h3>
+        <div class="tc">欣葉台菜 南西店（新光三越 南西店1館 8F）</div>
+        <dl>
+          <dt>住所</dt><dd class="cn">台北市中山區南京西路12號 8樓（新光三越南西店一館）</dd>
+          <dt>電話</dt><dd>02-2523-6757</dd>
+          <dt>最寄り</dt><dd>MRT淡水信義線・松山新店線「中山」駅 直結（新光三越南西1館へ上がって8F）</dd>
+          <dt>営業</dt><dd>11:00〜14:30／17:00〜21:30</dd>
+        </dl>
+        <div class="pt-act">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=欣葉台菜南西店">🗺 地図をひらく</a>
+          <a class="tel" href="tel:+886225236757">📞 電話</a>
+        </div>
+        <div class="pt-note">遅れる場合は幹事へLINE。8Fに上がって「シンイエ（欣葉）」で予約名を伝えてください。</div>
+      </div>
+
+      <div class="pt key">
+        <div class="pt-when">11/21（土） 11:00 ・ 全員</div>
+        <h3>九份ツアー 集合</h3>
+        <div class="tc">台北車站（台北駅）東3門・台鐵改札前</div>
+        <dl>
+          <dt>住所</dt><dd class="cn">台北市中正區北平西路3號</dd>
+          <dt>目印</dt><dd>台北駅1階ホールの<strong>東側</strong>。「東三門」の表示と、台鐵（在来線）の改札口が並んでいる場所。</dd>
+          <dt>遅刻時</dt><dd>台鐵で「瑞芳（ルイファン）」駅まで来て合流。それも無理なら九份茶坊へ直行。</dd>
+        </dl>
+        <div class="pt-act">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=台北車站東三門">🗺 地図をひらく</a>
+        </div>
+        <div class="pt-note">10:50までに到着推奨。ここで全員分の切符を確認してから台鐵に乗ります。</div>
+      </div>
+
+      <div class="pt">
+        <div class="pt-when">11/21（土） 13:00 ・ 全員</div>
+        <h3>九份ランチ</h3>
+        <div class="tc">九份茶坊（Jiufen Teahouse）</div>
+        <dl>
+          <dt>住所</dt><dd class="cn">新北市瑞芳區基山街142號</dd>
+          <dt>電話</dt><dd>02-2496-9056</dd>
+          <dt>営業</dt><dd>11:00〜20:00頃</dd>
+          <dt>行き方</dt><dd>瑞芳駅前からバス（788／825／827／856／1062）約15分 →「九份老街」下車 → 基山街を進んで徒歩5分</dd>
+        </dl>
+        <div class="pt-act">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=九份茶坊">🗺 地図をひらく</a>
+          <a class="tel" href="tel:+886224969056">📞 電話</a>
+        </div>
+      </div>
+
+      <div class="pt">
+        <div class="pt-when">11/22（日） 9:00 ・ Plan A</div>
+        <h3>國立故宮博物院</h3>
+        <div class="tc">National Palace Museum</div>
+        <dl>
+          <dt>住所</dt><dd class="cn">台北市士林區至善路二段221號</dd>
+          <dt>電話</dt><dd>02-2881-2021</dd>
+          <dt>開館</dt><dd>火〜日 9:00〜17:00（入場は16:30まで）／<strong>月曜休館</strong></dd>
+          <dt>行き方</dt><dd>MRT「士林」駅から紅30／255／304／小18・小19バスで約15分。中山エリアからUberなら約25分・NT$250〜350。</dd>
+          <dt>料金</dt><dd>入場 NT$350ほど＋日本語音声ガイド NT$150ほど</dd>
+        </dl>
+        <div class="pt-act">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=國立故宮博物院">🗺 地図をひらく</a>
+          <a class="web" href="https://www.npm.gov.tw/" target="_blank" rel="noopener">公式サイト</a>
+        </div>
+      </div>
+
+      <div class="pt">
+        <div class="pt-when">11/22（日） 9:00 ・ Plan B</div>
+        <h3>龍山寺</h3>
+        <div class="tc">艋舺龍山寺</div>
+        <dl>
+          <dt>住所</dt><dd class="cn">台北市萬華區廣州街211號</dd>
+          <dt>電話</dt><dd>02-2302-5162</dd>
+          <dt>参拝</dt><dd>朝6:00頃〜夜22:00頃（無料）</dd>
+          <dt>最寄り</dt><dd>MRT板南線「龍山寺」駅 1番出口すぐ</dd>
+          <dt>この後</dt><dd>西門町 →（MRTまたは徒歩）→ 迪化街・大稻埕 → 永樂市場でランチ</dd>
+        </dl>
+        <div class="pt-act">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=艋舺龍山寺">🗺 地図をひらく</a>
+        </div>
+        <div class="pt-note">本堂は撮影OKですが、参拝者の正面を横切らないこと。線香は入口で受け取れます（無料）。</div>
+      </div>
+
+      <div class="pt key">
+        <div class="pt-when">11/22（日） 14:30 ・ 全員合流</div>
+        <h3>小籠包・餃子づくり体験</h3>
+        <div class="tc">CookInn Taiwan 旅人料理教室（中山教室）</div>
+        <dl>
+          <dt>住所</dt><dd class="cn">台北市大同區承德路一段66號 2樓</dd>
+          <dt>電話</dt><dd>02-2517-1819</dd>
+          <dt>最寄り</dt><dd>MRT「中山」駅・「台北車站」からどちらも徒歩圏（承德路沿い、2階が教室）</dd>
+          <dt>持ち物</dt><dd>エプロン不要（貸出あり）。<strong>手を洗うので腕時計・指輪は外せる服装で</strong>。</dd>
+        </dl>
+        <div class="pt-act">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=CookInn Taiwan 承德路">🗺 地図をひらく</a>
+          <a class="tel" href="tel:+886225171819">📞 電話</a>
+          <a class="web" href="https://cookinn.tw/" target="_blank" rel="noopener">公式サイト</a>
+        </div>
+        <div class="pt-note">Plan A・B両方ともここで合流。14:20には2階に上がってください（所要 約2.5時間）。</div>
+      </div>
+
+      <div class="pt key">
+        <div class="pt-when">11/22（日） 19:00 ・ 全員</div>
+        <h3>打ち上げ・火鍋ディナー</h3>
+        <div class="tc">問鼎麻辣鍋・養生鍋（忠孝店）</div>
+        <dl>
+          <dt>住所</dt><dd class="cn">台北市大安區忠孝東路四段210號 2樓</dd>
+          <dt>電話</dt><dd>02-2731-2107</dd>
+          <dt>最寄り</dt><dd>MRT板南線「忠孝敦化」駅 3番出口すぐ（明曜百貨のとなり）</dd>
+          <dt>営業</dt><dd>11:30〜翌2:00（最終入店24:00）</dd>
+        </dl>
+        <div class="pt-act">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=問鼎麻辣鍋 忠孝店">🗺 地図をひらく</a>
+          <a class="tel" href="tel:+886227312107">📞 電話</a>
+        </div>
+        <div class="pt-note">店舗・個室は最終確定後に更新します。白い服は跳ねるので避けたほうが無難です。</div>
+      </div>
+
+      <div class="pt">
+        <div class="pt-when">11/22（日） 21:00 ・ 希望者</div>
+        <h3>饒河街観光夜市</h3>
+        <div class="tc">饒河街觀光夜市</div>
+        <dl>
+          <dt>住所</dt><dd class="cn">台北市松山區饒河街</dd>
+          <dt>最寄り</dt><dd>MRT松山新店線「松山」駅 5番出口すぐ（入口の大きな牌楼が目印）</dd>
+          <dt>営業</dt><dd>17:00〜24:00頃</dd>
+          <dt>名物</dt><dd>福州世祖胡椒餅（入口の行列）・蚵仔煎（牡蠣オムレツ）・薬膳スペアリブ</dd>
+        </dl>
+        <div class="pt-act">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=饒河街觀光夜市">🗺 地図をひらく</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== v2 : ACCESS ===== -->
+<section class="section" id="access">
+  <div class="container">
+    <div class="section-title">
+      <div class="num">ACCESS</div>
+      <h2>移動マニュアル</h2>
+      <p>バスは借りません。<strong>MRT ＋ 台鐵 ＋ Uber乗り合わせ</strong>で動きます。ここだけ読めば迷いません。</p>
+    </div>
+
+    <div class="route">
+      <h3><span class="pin">到着</span>桃園空港 → 台北市内</h3>
+      <div class="meta"><span>約35〜50分</span><span>NT$150</span><span>悠遊カード可</span></div>
+      <ol>
+        <li>入国・荷物受取後、案内板の <b>「機場捷運 / Airport MRT」</b> へ。T1もT2も駅直結です。</li>
+        <li><b>紫色の「直達車（Express）」</b>に乗れば台北車站まで約35分。青色の「普通車」でも料金は同じで約50分。</li>
+        <li>台北車站（A1）到着後、ホテルへはMRT乗換 or Uber。中山エリアなら台北車站から1駅です。</li>
+        <li>深夜到着（23時以降）は機場捷運が終わっているのでUber／タクシー（市内まで NT$1,000〜1,300・約50分）。</li>
+      </ol>
+      <div class="pt-note">松山空港着（羽田便）の場合はMRT文湖線「松山機場」駅から。中山エリアまでUberで15分・NT$200前後。</div>
+    </div>
+
+    <div class="route">
+      <h3><span class="pin">11/21</span>台北車站 → 瑞芳 → 九份</h3>
+      <div class="meta"><span>台鐵 約40〜50分</span><span>NT$49〜76</span><span>バス 約15分</span></div>
+      <ol>
+        <li>台北車站の<b>東3門・台鐵改札前</b>に11:00集合。</li>
+        <li>台鐵（在来線）で <b>瑞芳（Ruifang）</b> へ。區間車なら悠遊カードでそのまま改札を通れます（自強号は要切符）。</li>
+        <li>瑞芳駅を出て左手の大通りへ。バス停から <b>788 / 825 / 827 / 856 / 1062</b> のいずれかで約15分、<b>「九份老街」</b>下車。悠遊カード可・NT$15前後。</li>
+        <li>バス待ちが長いときはタクシー相乗り（瑞芳→九份 定額 NT$205前後、4人で割れば1人50元）。</li>
+        <li><b>帰り</b>は「1062」バスが九份から台北（忠孝復興駅）まで直通・約1時間15分。座れないときは瑞芳へ下りて台鐵が確実です。</li>
+      </ol>
+      <div class="pt-note">九份の帰りのバス停は行きと違い、坂を少し登った側です。夕方は行列するので17時台の下山がおすすめ。</div>
+    </div>
+
+    <div class="route">
+      <h3><span class="pin">市内</span>MRT・悠遊カード</h3>
+      <div class="meta"><span>運賃 NT$20〜35</span><span>カード購入 NT$100</span></div>
+      <ul>
+        <li><b>悠遊カード（EasyCard）</b>は空港・駅・コンビニ（7-ELEVEN／FamilyMart）で購入。カード代NT$100＋チャージ。MRT・バス・台鐵區間車・コンビニ支払いに使えます。</li>
+        <li>チャージはコンビニのレジで「<span class="cn">加值（ジャージー）</span>」と言えばOK。まず NT$500 入れておけば3泊は足ります。</li>
+        <li><b>MRT車内は飲食禁止</b>（水も含む・罰金 NT$1,500〜7,500）。改札を入ったら飲まない。</li>
+        <li>終電は各線 だいたい 24:00〜24:30。夜市帰りは時間に注意。</li>
+      </ul>
+    </div>
+
+    <div class="route">
+      <h3><span class="pin">タクシー</span>Uber ／ 配車アプリ</h3>
+      <div class="meta"><span>市内 NT$120〜300</span><span>4人シェア推奨</span></div>
+      <ul>
+        <li><b>出発前にUberアプリのインストールとクレジットカード登録を必ず済ませてください。</b>現地で登録しようとするとSMS認証で詰まります。</li>
+        <li>4人乗れば1人あたり数百円。今回の団体移動はこれが基本です。</li>
+        <li>Uberがつかまらないときの予備として <b>台灣大車隊（55688）</b> アプリも入れておくと安心。</li>
+        <li>流しのタクシーはメーター（跳表）を必ず確認。<b>「攬客」＝声をかけてくる客引きには乗らない。</b></li>
+        <li>行き先は口で言わず、このページの<b>中国語の住所を見せる</b>のが最速で確実です。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <!-- RESTAURANTS -->
 <section class="section section-light">
   <div class="container">
     <div class="section-title">
       <div class="num">RESTAURANTS</div>
-      <h2>食事処（予定）</h2>
+      <h2>食事処</h2>
+      <p>住所・電話・地図つきの詳細は上の「<a href="#meet" style="color:var(--red);font-weight:700">集合場所ぜんぶ</a>」を見てください。</p>
     </div>
     <div class="rest-grid">
       <div class="rest-card">
         <div class="when">11/20（金） 19:00</div>
         <h3>歓迎食事会</h3>
-        <div class="tc">欣葉 台菜（中山本店）</div>
+        <div class="tc">欣葉台菜 南西店</div>
+        <div class="pt-note" style="margin:0 0 10px">📍 中山區南京西路12號 8F（新光三越南西1館）／MRT中山駅直結／02-2523-6757</div>
         <p>台湾料理の老舗。<strong>円卓2台で15名対応</strong>、自己紹介・乾杯にぴったり。MRT中山駅徒歩圏。</p>
         <div class="info">
           <span class="badge">台湾料理</span>
@@ -1288,6 +1672,7 @@ footer .brand {
         <div class="when">11/21（土） 13:00</div>
         <h3>九份ランチ</h3>
         <div class="tc">九份茶坊</div>
+        <div class="pt-note" style="margin:0 0 10px">📍 新北市瑞芳區基山街142號／瑞芳駅からバス15分＋徒歩5分／02-2496-9056</div>
         <p>『千と千尋』モデルの茶藝館。<strong>15名分の眺望席を事前確保</strong>。台湾茶と軽食で九份の世界観を満喫。</p>
         <div class="info">
           <span class="badge">茶藝館</span>
@@ -1299,7 +1684,8 @@ footer .brand {
       <div class="rest-card">
         <div class="when">11/22（日） 14:00</div>
         <h3>小籠包づくり体験</h3>
-        <div class="tc">CookInn Taiwan</div>
+        <div class="tc">CookInn Taiwan（中山教室）</div>
+        <div class="pt-note" style="margin:0 0 10px">📍 大同區承德路一段66號 2F／MRT中山駅・台北駅から徒歩圏／02-2517-1819</div>
         <p>合同交流コンテンツ。粉から包む小籠包DIY、自分で作ったものを蒸して食べる。<strong>15名団体プログラム・日本語対応</strong>。</p>
         <div class="info">
           <span class="badge">体験型</span>
@@ -1311,7 +1697,8 @@ footer .brand {
       <div class="rest-card">
         <div class="when">11/22（日） 19:00</div>
         <h3>打ち上げ・火鍋ディナー</h3>
-        <div class="tc">問鼎麻辣鍋（信義店）</div>
+        <div class="tc">問鼎麻辣鍋・養生鍋（忠孝店）</div>
+        <div class="pt-note" style="margin:0 0 10px">📍 大安區忠孝東路四段210號 2F／MRT忠孝敦化駅3番出口／02-2731-2107</div>
         <p>高級系火鍋。<strong>VIP個室で15名貸切</strong>予定。鍋を囲んで3時間しゃべり倒す台湾流の打ち上げ。辛さ調整・ベジ対応可。</p>
         <div class="info">
           <span class="badge">火鍋</span>
@@ -1571,70 +1958,78 @@ footer .brand {
 </section>
 
 <!-- TIPS / PREP -->
-<section class="section">
+<section class="section" id="check">
   <div class="container">
     <div class="section-title">
       <div class="num">PREPARATION</div>
-      <h2>準備するもの・気をつけること</h2>
+      <h2>持ち物チェックリスト</h2>
+      <p>タップでチェックできます。この端末に保存されるので、荷造りしながら消し込んでいってください。</p>
+    </div>
+
+    <div class="chk-bar">
+      <div class="txt"><b id="chk-done">0</b> / <span id="chk-total">0</span> 完了
+        <div class="chk-prog"><i id="chk-prog" style="width:0%"></i></div>
+      </div>
+      <button id="chk-reset" type="button">チェックをリセット</button>
     </div>
 
     <div class="prep-grid">
       <div class="prep-card">
         <h3>📄 必携書類</h3>
-        <ul>
-          <li>パスポート<small>残存有効期間 出国時3ヶ月以上</small></li>
-          <li>航空券・eチケット控え</li>
-          <li>ホテル予約確認書</li>
-          <li>海外旅行保険証券<small>クレカ付帯でもOK</small></li>
+        <ul class="chk">
+          <li><label><input type="checkbox"><span>パスポート<small>残存有効期間 出国時3ヶ月以上</small></span></label></li>
+          <li><label><input type="checkbox"><span>航空券・eチケット控え</span></label></li>
+          <li><label><input type="checkbox"><span>ホテル予約確認書</span></label></li>
+          <li><label><input type="checkbox"><span>海外旅行保険証券<small>クレカ付帯でもOK</small></span></label></li>
         </ul>
       </div>
 
       <div class="prep-card">
         <h3>💳 お金関係</h3>
-        <ul>
-          <li>クレジットカード<small>VISA / Mastercard が無難</small></li>
-          <li>現金 NT$ 5,000〜10,000<small>夜市・タクシー用</small></li>
-          <li>悠遊カード<small>到着後コンビニで購入</small></li>
+        <ul class="chk">
+          <li><label><input type="checkbox"><span>クレジットカード<small>VISA / Mastercard が無難</small></span></label></li>
+          <li><label><input type="checkbox"><span>現金 NT$ 5,000〜10,000<small>夜市・タクシー用</small></span></label></li>
+          <li><label><input type="checkbox"><span>悠遊カード<small>到着後コンビニで購入</small></span></label></li>
         </ul>
       </div>
 
       <div class="prep-card">
         <h3>📱 必須アプリ</h3>
-        <ul>
-          <li>Uber<small>みんなで乗り合わせれば1人数百円</small></li>
-          <li>Taxi Go<small>Uberが捕まらない時の予備</small></li>
-          <li>Google Maps（オフライン地図ダウンロード）</li>
-          <li>Google翻訳 / DeepL</li>
-          <li>LINE<small>グループ連絡用</small></li>
+        <ul class="chk">
+          <li><label><input type="checkbox"><span>Uber<small>みんなで乗り合わせれば1人数百円</small></span></label></li>
+          <li><label><input type="checkbox"><span>Taxi Go<small>Uberが捕まらない時の予備</small></span></label></li>
+          <li><label><input type="checkbox"><span>Google Maps（オフライン地図ダウンロード）</span></label></li>
+          <li><label><input type="checkbox"><span>Google翻訳 / DeepL</span></label></li>
+          <li><label><input type="checkbox"><span>LINE<small>グループ連絡用</small></span></label></li>
         </ul>
       </div>
 
       <div class="prep-card">
         <h3>📶 通信</h3>
-        <ul>
-          <li>eSIM<small>Airalo / Holafly が手軽</small></li>
-          <li>または Wi-Fiルーター<small>空港受取可</small></li>
-          <li>11/21の集合に必須なので必ず用意</li>
+        <ul class="chk">
+          <li><label><input type="checkbox"><span>eSIM<small>Airalo / Holafly が手軽</small></span></label></li>
+          <li><label><input type="checkbox"><span>または Wi-Fiルーター<small>空港受取可</small></span></label></li>
+          <li><label><input type="checkbox"><span>11/21の集合に必須なので必ず用意</span></label></li>
         </ul>
       </div>
 
       <div class="prep-card">
         <h3>👕 服装</h3>
-        <ul>
-          <li>長袖シャツ＋羽織り物<small>11月平均20℃前後</small></li>
-          <li>歩きやすいスニーカー<small>九份の石段は必須</small></li>
-          <li>折り畳み傘<small>11月は雨が多い</small></li>
-          <li>軽いダウンや薄手ジャケット<small>夜は冷える</small></li>
+        <ul class="chk">
+          <li><label><input type="checkbox"><span>長袖シャツ＋羽織り物<small>11月平均20℃前後</small></span></label></li>
+          <li><label><input type="checkbox"><span>歩きやすいスニーカー<small>九份の石段は必須</small></span></label></li>
+          <li><label><input type="checkbox"><span>折り畳み傘<small>11月は雨が多い</small></span></label></li>
+          <li><label><input type="checkbox"><span>軽いダウンや薄手ジャケット<small>夜は冷える</small></span></label></li>
         </ul>
       </div>
 
       <div class="prep-card">
         <h3>🔌 電源・その他</h3>
-        <ul>
-          <li>変換プラグ不要<small>台湾は日本と同じAタイプ・110V</small></li>
-          <li>モバイルバッテリー</li>
-          <li>常備薬・胃腸薬<small>食べ歩きで胃が疲れる</small></li>
-          <li>ウェットティッシュ・除菌シート</li>
+        <ul class="chk">
+          <li><label><input type="checkbox"><span>変換プラグ不要<small>台湾は日本と同じAタイプ・110V</small></span></label></li>
+          <li><label><input type="checkbox"><span>モバイルバッテリー</span></label></li>
+          <li><label><input type="checkbox"><span>常備薬・胃腸薬<small>食べ歩きで胃が疲れる</small></span></label></li>
+          <li><label><input type="checkbox"><span>ウェットティッシュ・除菌シート</span></label></li>
         </ul>
       </div>
     </div>
@@ -1651,6 +2046,252 @@ footer .brand {
         <li><strong>同伴者連れの場合は事前申告</strong> — 食事会の人数調整があるため、必ず事前にお知らせください。</li>
         <li><strong>飲酒運転は厳罰</strong> — 台湾はバイク・自転車も対象。レンタル時注意。</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== v2 : PHRASES ===== -->
+<section class="section section-light" id="phrase">
+  <div class="container">
+    <div class="section-title">
+      <div class="num">CHINESE</div>
+      <h2>これだけ覚える中国語</h2>
+      <p>通じなければ<strong>画面を見せればOK</strong>。台湾の人はとても親切です。</p>
+    </div>
+
+    <div class="ph-group">
+      <h3>あいさつ・基本</h3>
+      <div class="ph"><span class="jp">こんにちは</span><span class="cn">你好</span><span class="yomi">ニーハオ</span></div>
+      <div class="ph"><span class="jp">ありがとう</span><span class="cn">謝謝</span><span class="yomi">シェイシェイ</span></div>
+      <div class="ph"><span class="jp">すみません（呼びかけ）</span><span class="cn">不好意思</span><span class="yomi">ブーハオイース</span></div>
+      <div class="ph"><span class="jp">日本人です</span><span class="cn">我是日本人</span><span class="yomi">ウォ シー リーベンレン</span></div>
+      <div class="ph"><span class="jp">中国語が話せません</span><span class="cn">我不會中文</span><span class="yomi">ウォ ブーホイ ジョンウェン</span></div>
+      <div class="ph"><span class="jp">英語（日本語）できますか？</span><span class="cn">你會英文（日文）嗎？</span><span class="yomi">ニーホイ インウェン（リーウェン）マ</span></div>
+    </div>
+
+    <div class="ph-group">
+      <h3>お店・注文</h3>
+      <div class="ph"><span class="jp">これください</span><span class="cn">我要這個</span><span class="yomi">ウォヤオ ジェイガ</span></div>
+      <div class="ph"><span class="jp">いくらですか？</span><span class="cn">多少錢？</span><span class="yomi">ドゥオシャオ チエン</span></div>
+      <div class="ph"><span class="jp">◯人です（予約あり）</span><span class="cn">我們有訂位</span><span class="yomi">ウォメン ヨウ ディンウェイ</span></div>
+      <div class="ph"><span class="jp">カードで払えますか？</span><span class="cn">可以刷卡嗎？</span><span class="yomi">クーイー シュアカー マ</span></div>
+      <div class="ph"><span class="jp">辛くしないでください</span><span class="cn">不要辣</span><span class="yomi">ブーヤオ ラー</span></div>
+      <div class="ph"><span class="jp">パクチー抜きで</span><span class="cn">不要香菜</span><span class="yomi">ブーヤオ シャンツァイ</span></div>
+      <div class="ph"><span class="jp">持ち帰りで</span><span class="cn">外帶</span><span class="yomi">ワイダイ</span></div>
+      <div class="ph"><span class="jp">店内で食べます</span><span class="cn">內用</span><span class="yomi">ネイヨン</span></div>
+      <div class="ph"><span class="jp">おいしい！</span><span class="cn">好好吃！</span><span class="yomi">ハオハオチー</span></div>
+      <div class="ph"><span class="jp">（悠遊カードに）チャージして</span><span class="cn">加值</span><span class="yomi">ジャージー</span></div>
+    </div>
+
+    <div class="ph-group">
+      <h3>移動・道</h3>
+      <div class="ph"><span class="jp">ここに行きたいです</span><span class="cn">我想去這裡</span><span class="yomi">ウォシャンチー ジェリ</span></div>
+      <div class="ph"><span class="jp">メーターでお願いします</span><span class="cn">麻煩跳表</span><span class="yomi">マーファン ティアオビャオ</span></div>
+      <div class="ph"><span class="jp">ここで停めてください</span><span class="cn">這裡停，謝謝</span><span class="yomi">ジェリ ティン シェイシェイ</span></div>
+      <div class="ph"><span class="jp">トイレはどこですか？</span><span class="cn">廁所在哪裡？</span><span class="yomi">ツースオ ザイ ナーリ</span></div>
+      <div class="ph"><span class="jp">九份へ行くバスはどれ？</span><span class="cn">去九份的公車是哪一班？</span><span class="yomi">チー ジウフェンダ ゴンチャー シー ナーイーバン</span></div>
+    </div>
+
+    <div class="ph-group">
+      <h3>困ったとき</h3>
+      <div class="ph"><span class="jp">助けてください</span><span class="cn">請幫幫我</span><span class="yomi">チン バンバンウォ</span></div>
+      <div class="ph"><span class="jp">具合が悪いです</span><span class="cn">我不舒服</span><span class="yomi">ウォ ブーシューフー</span></div>
+      <div class="ph"><span class="jp">病院に行きたい</span><span class="cn">我想去醫院</span><span class="yomi">ウォシャンチー イーユエン</span></div>
+      <div class="ph"><span class="jp">財布をなくしました</span><span class="cn">我的錢包不見了</span><span class="yomi">ウォダ チエンバオ ブージエンラ</span></div>
+      <div class="ph"><span class="jp">警察を呼んでください</span><span class="cn">請叫警察</span><span class="yomi">チン ジャオ ジンチャー</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== v2 : SOUVENIR ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <div class="num">SOUVENIR</div>
+      <h2>お土産リスト</h2>
+      <p>迷ったらこの中から。<strong>買う場所も書いてあります</strong>。</p>
+    </div>
+
+    <div class="omi-grid">
+      <div class="omi">
+        <div class="rank">DEFINITIVE 01</div>
+        <h3>パイナップルケーキ（鳳梨酥）</h3>
+        <p>台湾土産の絶対王者。バラマキ用と自分用で店を変えるのが通。</p>
+        <div class="buy"><b>買う場所：</b>佳德糕餅（南京東路・行列必至）／微熱山丘（民生公園・試食＋お茶が無料）／空港でも買えるが種類は少なめ</div>
+      </div>
+      <div class="omi">
+        <div class="rank">DEFINITIVE 02</div>
+        <h3>ヌガークラッカー（牛軋餅）</h3>
+        <p>ねぎクラッカーにヌガーを挟んだ甘じょっぱい系。日本人にいちばん喜ばれる新定番。</p>
+        <div class="buy"><b>買う場所：</b>迪化街の菓子店／各デパ地下／空港</div>
+      </div>
+      <div class="omi">
+        <div class="rank">FOOD 03</div>
+        <h3>カラスミ（烏魚子）</h3>
+        <p>日本で買うと数倍の値段。真空パックなら持ち帰りOK。酒好きへの本命土産。</p>
+        <div class="buy"><b>買う場所：</b><b>迪化街</b>（11/20のさんぽツアーで買えます）／永樂市場周辺</div>
+      </div>
+      <div class="omi">
+        <div class="rank">TEA 04</div>
+        <h3>台湾茶（凍頂烏龍・東方美人・鉄観音）</h3>
+        <p>ティーバッグなら配りやすく軽い。茶葉は量り売りで好みを伝えると選んでくれます。</p>
+        <div class="buy"><b>買う場所：</b>迪化街の茶問屋（安い）／小茶栽堂・京盛宇（パッケージが美しい）／九份茶坊でも購入可</div>
+      </div>
+      <div class="omi">
+        <div class="rank">SNACK 05</div>
+        <h3>ドライフルーツ（愛文マンゴー・グアバ）</h3>
+        <p>軽くてかさばらず日持ちする。子ども・女性に鉄板。</p>
+        <div class="buy"><b>買う場所：</b>迪化街の乾物街／スーパー（家樂福・全聯）</div>
+      </div>
+      <div class="omi">
+        <div class="rank">DAILY 06</div>
+        <h3>スーパー土産（麵線・ルーロー飯の素・胡椒塩）</h3>
+        <p>いちばんコスパが良いゾーン。台湾ビール、マンゴービールも定番。</p>
+        <div class="buy"><b>買う場所：</b>全聯福利中心（PXマート）／家樂福 桂林店（西門から近い）</div>
+      </div>
+      <div class="omi">
+        <div class="rank">BEAUTY 07</div>
+        <h3>フェイスマスク（我的美麗日記など）</h3>
+        <p>1枚数十円クラス。ドラッグストアでまとめ買いが基本。</p>
+        <div class="buy"><b>買う場所：</b>康是美（COSMED）／屈臣氏（Watsons）／どのMRT駅にもあります</div>
+      </div>
+      <div class="omi">
+        <div class="rank">CRAFT 08</div>
+        <h3>台湾花布・茶器・レトロ雑貨</h3>
+        <p>「自分だけの一点」枠。catawiki的な目利き心をくすぐる掘り出し物あり。</p>
+        <div class="buy"><b>買う場所：</b>迪化街（大稻埕）の雑貨店／小藝埕・民藝埕</div>
+      </div>
+    </div>
+
+    <div class="mini-note">
+      ※ 液体（酒・調味料・お茶のボトル）は<strong>必ず預け荷物へ</strong>。手荷物では没収されます。<br>
+      ※ 生鮮の果物・肉製品（ソーセージ・肉鬆など）は<strong>日本へ持ち込めません</strong>。真空パックでもNGです。
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== v2 : EMERGENCY ===== -->
+<section class="sos-section" id="sos">
+  <div class="container">
+    <div class="section-title">
+      <div class="num">EMERGENCY</div>
+      <h2>困ったときの連絡先</h2>
+      <p>番号をタップするとそのまま発信できます。<strong>出発前にこのページをブックマーク</strong>しておいてください。</p>
+    </div>
+
+    <div class="sos-grid">
+
+      <div class="sos-card">
+        <h3>🚨 緊急（台湾国内）</h3>
+        <div class="sos-row">
+          <div class="n">警察<small>事件・事故・盗難</small></div>
+          <a class="num" href="tel:110">110</a>
+        </div>
+        <div class="sos-row">
+          <div class="n">消防・救急車<small>火事・急病・ケガ</small></div>
+          <a class="num" href="tel:119">119</a>
+        </div>
+        <div class="sos-row">
+          <div class="n">観光案内ホットライン<small>24時間・日本語対応</small></div>
+          <a class="num" href="tel:0800011765">0800-011-765</a>
+        </div>
+        <div class="sos-row">
+          <div class="n">外国人生活相談<small>台湾国内から</small></div>
+          <a class="num" href="tel:1990">1990</a>
+        </div>
+      </div>
+
+      <div class="sos-card">
+        <h3>🇯🇵 日本の窓口</h3>
+        <div class="sos-row">
+          <div class="n">日本台湾交流協会 台北事務所<small>パスポート紛失・事件事故のとき</small></div>
+          <a class="num" href="tel:+886227138000">02-2713-8000</a>
+        </div>
+        <div class="sos-row">
+          <div class="n">所在地<small class="cn">台北市松山區慶城街28號 通泰大樓</small></div>
+          <a class="num" href="https://www.google.com/maps/search/?api=1&amp;query=日本台湾交流協会 台北事務所" target="_blank" rel="noopener">🗺</a>
+        </div>
+        <div class="sos-row">
+          <div class="n">外務省 海外安全ホットライン<small>日本から／24時間</small></div>
+          <span class="num plain">+81-3-3580-3311</span>
+        </div>
+      </div>
+
+      <div class="sos-card">
+        <h3>💳 カード紛失・盗難</h3>
+        <div class="sos-row">
+          <div class="n">まずカード裏面の緊急連絡先へ<small>出発前にカード裏面を撮影しておくこと</small></div>
+        </div>
+        <div class="sos-row">
+          <div class="n">JCB 紛失盗難受付<small>日本・24時間／コレクトコール可</small></div>
+          <span class="num plain">+81-422-40-8122</span>
+        </div>
+        <div class="sos-row">
+          <div class="n">Visa グローバル・カスタマー・アシスタンス</div>
+          <span class="num plain">+1-303-967-1096</span>
+        </div>
+        <div class="sos-row">
+          <div class="n">Mastercard グローバルサービス</div>
+          <span class="num plain">+1-636-722-7111</span>
+        </div>
+      </div>
+
+      <div class="sos-card">
+        <h3>🏥 病院・体調不良</h3>
+        <div class="sos-row">
+          <div class="n">馬偕紀念醫院（中山）<small class="cn">台北市中山區中山北路二段92號・救急24h</small></div>
+          <a class="num" href="tel:+886225433535">02-2543-3535</a>
+        </div>
+        <div class="sos-row">
+          <div class="n">台安醫院（松山）<small class="cn">台北市松山區八德路二段424號</small></div>
+          <a class="num" href="tel:+886227718151">02-2771-8151</a>
+        </div>
+        <div class="sos-row">
+          <div class="n">受診前にまずホテルフロントへ<small>通訳手配・タクシー手配をしてもらうのがいちばん早い</small></div>
+        </div>
+        <div class="sos-row">
+          <div class="n">海外旅行保険<small>クレカ付帯の場合もキャッシュレス診療の可否を事前確認</small></div>
+        </div>
+      </div>
+
+      <div class="sos-card">
+        <h3>🚇 落とし物</h3>
+        <div class="sos-row">
+          <div class="n">台北MRT 遺失物センター</div>
+          <a class="num" href="tel:+886221812345">02-2181-2345</a>
+        </div>
+        <div class="sos-row">
+          <div class="n">台鐵 台北駅</div>
+          <a class="num" href="tel:+886223713558">02-2371-3558</a>
+        </div>
+        <div class="sos-row">
+          <div class="n">タクシー内の忘れ物<small>Uberはアプリの履歴から運転手へ連絡できます</small></div>
+        </div>
+      </div>
+
+      <div class="sos-card">
+        <h3>👥 ツアー幹事</h3>
+        <div class="sos-row">
+          <div class="n">MoneyGoose 幹事<small>出発前に番号を掲載します</small></div>
+          <span class="num plain">TBD</span>
+        </div>
+        <div class="sos-row">
+          <div class="n">catawiki 永廣スクール 幹事<small>出発前に番号を掲載します</small></div>
+          <span class="num plain">TBD</span>
+        </div>
+        <div class="sos-row">
+          <div class="n">ツアーLINEグループ<small>連絡はすべてここに流します</small></div>
+          <span class="num plain">TBD</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sos-fill">
+      ⚠️ <strong>迷子になったら</strong>：まずLINEグループに現在地のスクリーンショットを投げてください。電波がないときは、近くのコンビニ（7-ELEVEN／FamilyMart）に入ってWi-Fiを借りるのが確実です。台湾のコンビニは24時間・どの街角にもあります。
     </div>
   </div>
 </section>
@@ -1674,14 +2315,29 @@ footer .brand {
       <div class="faq-q">11/22の午前は Plan A・B どちらを選べばいいですか？</div>
       <div class="faq-a"><strong>美術・歴史・骨董に興味がある方は Plan A（故宮博物院）</strong>、<strong>街歩き・物流リサーチ・グルメに興味がある方は Plan B（龍山寺＋迪化街）</strong>がおすすめです。catawikiメンバーはAが王道、eBayメンバーはBが王道ですが、好みで自由に選んでOK。<strong>事前申告</strong>をお願いします（人数把握のため）。両コースとも12:30解散で、14:30の小籠包体験で全員合流します。</div>
     </div>
-    </div>
     <div class="faq-item">
       <div class="faq-q">アレルギーや苦手な食材があります</div>
       <div class="faq-a">予約前にヒアリングフォームをお送りしますので、必ず事前にお知らせください。可能な範囲でメニュー調整します。</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">11/23に観光したい場合のおすすめは？</div>
-      <div class="faq-a">フライト時刻次第ですが、午前中なら龍山寺・中正紀念堂・故宮博物院、お土産購入なら微風南山・三越信義新天地などが定番です。</div>
+      <div class="faq-a"><strong>11/23（月）は故宮博物院が休館日</strong>なのでご注意ください（故宮は月曜休館）。午前中に回るなら龍山寺・中正紀念堂・台北101、お土産なら微風南山・三越信義新天地・迪化街が定番です。桃園空港へは機場捷運（台北車站から直達車35分・NT$150）で、<strong>出発2時間前には空港到着</strong>を目安に逆算してください。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">両替はどこでするのがお得ですか？</div>
+      <div class="faq-a">日本で円→台湾ドルに替えるより、<strong>台湾に着いてから両替するほうがレートが良い</strong>のが基本です。空港の銀行窓口（手数料NT$30程度）でとりあえず1万円分ほど替え、あとは市中銀行かATMで。カードが使える店が多いので、現金は夜市・タクシー・小さな店用に NT$5,000〜10,000 あれば十分です。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">チップは必要ですか？</div>
+      <div class="faq-a">台湾に<strong>チップの習慣はありません</strong>。レストランでは伝票に「服務費10%」が最初から加算されていることが多く、それ以上払う必要はありません。ホテルのポーターに荷物を運んでもらったときだけ NT$50〜100 を渡すと丁寧、という程度です。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">体調を崩したり、ケガをしたらどうすればいいですか？</div>
+      <div class="faq-a">まず<strong>ツアーLINEグループに連絡</strong>してください。そのうえで、軽症ならホテルフロントに相談すると近くのクリニックとタクシーを手配してくれます。緊急時は <strong>119（救急）</strong>。病院・保険の連絡先は「<a href="#sos" style="color:var(--red);font-weight:700">困ったときの連絡先</a>」にまとめてあります。海外旅行保険（クレカ付帯でも可）の証券番号は必ずスマホに保存しておいてください。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">スマホの電波・Wi-Fiはどうすればいい？</div>
+      <div class="faq-a"><strong>eSIM（Airalo・Holafly など）が最も手軽</strong>です。出発前に購入しておけば、台湾着で機内モードを切るだけで開通します。Wi-Fiルーター派は空港受取を予約。11/21の九份集合や現地でのUber手配に通信が必須なので、<strong>必ずどちらかを用意してください</strong>。予備としてGoogleマップの台北エリアをオフライン保存しておくと安心です。</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">家族や同伴者を連れて行ってもいいですか？</div>
@@ -1705,11 +2361,147 @@ footer .brand {
 </footer>
 
 <script>
+/* ---------- FAQ 開閉 ---------- */
 document.querySelectorAll('.faq-item').forEach(item => {
   item.querySelector('.faq-q').addEventListener('click', () => {
     item.classList.toggle('open');
   });
 });
+
+/* ---------- 行程データ（すべて台湾時間） ---------- */
+var TRIP = [
+  {t:'2026-11-20T15:00:00+08:00', d:0, title:'迪化街さんぽツアー', sub:'集合：永樂市場 入口（任意参加）'},
+  {t:'2026-11-20T19:00:00+08:00', d:0, title:'歓迎食事会',        sub:'集合：欣葉台菜 南西店（新光三越南西1館 8F・MRT中山駅直結）'},
+  {t:'2026-11-21T11:00:00+08:00', d:1, title:'九份ツアー 集合',    sub:'集合：台北車站 東3門・台鐵改札前'},
+  {t:'2026-11-21T13:00:00+08:00', d:1, title:'九份ランチ＆散策',   sub:'九份茶坊（基山街142號）'},
+  {t:'2026-11-21T17:00:00+08:00', d:1, title:'提灯点灯タイム → 下山', sub:'1062バス直通 or 瑞芳経由で台北へ'},
+  {t:'2026-11-22T09:00:00+08:00', d:2, title:'Plan A 故宮 / Plan B 龍山寺', sub:'各コース現地集合（Uberで直行）'},
+  {t:'2026-11-22T14:30:00+08:00', d:2, title:'小籠包・餃子づくり体験', sub:'CookInn Taiwan 中山教室（承德路一段66號 2F）'},
+  {t:'2026-11-22T19:00:00+08:00', d:2, title:'火鍋ディナー（打ち上げ）', sub:'問鼎麻辣鍋 忠孝店（忠孝敦化駅3番出口）'},
+  {t:'2026-11-22T21:00:00+08:00', d:2, title:'饒河街夜市（希望者）', sub:'MRT松山駅 5番出口'},
+  {t:'2026-11-23T09:00:00+08:00', d:3, title:'自由解散・チェックアウト', sub:'公式イベントなし。フライトに合わせて自由行動'}
+];
+var TRIP_START = new Date('2026-11-20T00:00:00+08:00');
+var TRIP_END   = new Date('2026-11-24T00:00:00+08:00');
+
+/* ---------- NOW BAR ---------- */
+(function(){
+  var lbl = document.getElementById('nb-lbl');
+  var main = document.getElementById('nb-main');
+  var sub = document.getElementById('nb-sub');
+  if(!main) return;
+
+  function render(){
+    var now = new Date();
+    if(now < TRIP_START){
+      var days = Math.ceil((TRIP_START - now) / 86400000);
+      lbl.textContent = 'COUNTDOWN';
+      main.textContent = '出発まで あと ' + days + '日';
+      sub.textContent = '2026.11.20（金）台北集合 ／ まずは航空券とホテルの確保を';
+      return;
+    }
+    if(now >= TRIP_END){
+      lbl.textContent = 'THANK YOU';
+      main.textContent = 'ツアーは終了しました';
+      sub.textContent = 'また次の旅で。謝謝！';
+      return;
+    }
+    var next = null;
+    for(var i=0;i<TRIP.length;i++){
+      if(new Date(TRIP[i].t) > now){ next = TRIP[i]; break; }
+    }
+    if(!next){
+      lbl.textContent = 'TODAY';
+      main.textContent = '本日の予定は終了しました';
+      sub.textContent = 'おつかれさまでした。明日もよろしくお願いします。';
+      return;
+    }
+    var dt = new Date(next.t);
+    var mins = Math.round((dt - now) / 60000);
+    var left = mins < 60 ? ('あと' + mins + '分')
+             : mins < 60*24 ? ('あと約' + Math.round(mins/60) + '時間')
+             : '';
+    var hh = dt.toLocaleTimeString('ja-JP', {timeZone:'Asia/Taipei', hour:'2-digit', minute:'2-digit'});
+    var md = (dt.getMonth()+1) + '/' + dt.getDate();
+    lbl.textContent = 'NEXT' + (left ? ' ・ ' + left : '');
+    main.textContent = md + ' ' + hh + '　' + next.title;
+    sub.textContent = next.sub;
+  }
+  render();
+  setInterval(render, 30000);
+})();
+
+/* ---------- 日付タブ ---------- */
+(function(){
+  var tabs = document.getElementById('daytabs');
+  var days = document.querySelectorAll('#schedule .day');
+  if(!tabs || !days.length) return;
+
+  function show(key){
+    days.forEach(function(el, i){
+      el.hidden = !(key === 'all' || String(i) === key);
+    });
+    tabs.querySelectorAll('button').forEach(function(b){
+      b.classList.toggle('on', b.dataset.day === key);
+    });
+  }
+  tabs.addEventListener('click', function(e){
+    var b = e.target.closest('button');
+    if(b) show(b.dataset.day);
+  });
+
+  /* 会期中は自動で「今日」を開く */
+  var now = new Date();
+  if(now >= TRIP_START && now < TRIP_END){
+    var today = now.toLocaleDateString('en-CA', {timeZone:'Asia/Taipei'}); // YYYY-MM-DD
+    var map = {'2026-11-20':'0','2026-11-21':'1','2026-11-22':'2','2026-11-23':'3'};
+    if(map[today]) show(map[today]);
+  }
+})();
+
+/* ---------- 持ち物チェックリスト（この端末に保存） ---------- */
+(function(){
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('.prep-card ul.chk input[type=checkbox]'));
+  if(!boxes.length) return;
+  var KEY = 'tw2026-checklist-v1';
+  var doneEl = document.getElementById('chk-done');
+  var totalEl = document.getElementById('chk-total');
+  var progEl = document.getElementById('chk-prog');
+  var resetEl = document.getElementById('chk-reset');
+
+  function load(){
+    try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){ return {}; }
+  }
+  function save(state){
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){}
+  }
+  function paint(){
+    var n = boxes.filter(function(b){ return b.checked; }).length;
+    if(doneEl) doneEl.textContent = n;
+    if(totalEl) totalEl.textContent = boxes.length;
+    if(progEl) progEl.style.width = Math.round(n / boxes.length * 100) + '%';
+  }
+
+  var state = load();
+  boxes.forEach(function(b, i){
+    b.dataset.k = 'c' + i;
+    if(state[b.dataset.k]) b.checked = true;
+    b.addEventListener('change', function(){
+      var st = load();
+      if(b.checked) st[b.dataset.k] = 1; else delete st[b.dataset.k];
+      save(st);
+      paint();
+    });
+  });
+  if(resetEl){
+    resetEl.addEventListener('click', function(){
+      boxes.forEach(function(b){ b.checked = false; });
+      save({});
+      paint();
+    });
+  }
+  paint();
+})();
 </script>
 </body>
 </html>
