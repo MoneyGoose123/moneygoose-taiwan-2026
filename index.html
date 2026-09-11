@@ -1063,6 +1063,112 @@ footer .brand {
   body{font-size:11pt}
 }
 
+/* ============ BEFORE YOU GO ============ */
+.section-title p{
+  font-size:14.5px;color:var(--gray);line-height:1.9;margin-top:18px;
+  max-width:620px;margin-left:auto;margin-right:auto;
+}
+.bygo{
+  background:var(--light);
+  margin-top:40px;                 /* 浮いているOVERVIEWカードとの間に余白 */
+  padding:64px 0 76px;
+  border-bottom:1px solid rgba(0,0,0,.05);
+}
+.bygo .section-title{margin-bottom:44px}
+.bygo-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+  align-items:start;            /* カードを内容の高さに合わせる（余白が空きすぎない） */
+}
+.bg-card{
+  position:relative;
+  background:var(--white);
+  border-radius:16px;
+  padding:26px 24px 24px;
+  box-shadow:0 2px 14px rgba(0,0,0,.05);
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.bg-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.09)}
+.bg-card .no{
+  position:absolute;top:12px;right:18px;
+  font-family:'Noto Serif TC',serif;
+  font-size:54px;font-weight:900;line-height:1;
+  color:rgba(200,16,46,.07);
+  letter-spacing:-2px;pointer-events:none;user-select:none;
+}
+.bg-card .ico{font-size:27px;line-height:1;margin-bottom:13px}
+.bg-card h3{
+  font-size:16.5px;line-height:1.5;margin-bottom:10px;
+  letter-spacing:.5px;position:relative;z-index:1;
+}
+.bg-card p{font-size:13.5px;color:var(--gray);line-height:1.85;word-break:normal;overflow-wrap:anywhere}
+.bg-card p+p{margin-top:8px}
+.bg-card p strong{color:var(--ink);font-weight:700}
+.bg-card .tag{
+  align-self:flex-start;margin-top:15px;
+  font-size:11px;font-weight:700;letter-spacing:1.5px;
+  background:var(--light);color:var(--gray);
+  padding:6px 13px;border-radius:100px;
+}
+.bg-card.onsite{border-top:3px solid var(--gold)}
+.bg-card.onsite .no{color:rgba(212,160,23,.14)}
+.bg-card.onsite .tag{background:rgba(212,160,23,.16);color:#7a5c00}
+
+/* TWAC：必須カード */
+.bg-card.must{
+  background:linear-gradient(180deg,#ffffff 0%,#fff7f7 100%);
+  border:2px solid var(--red);
+  box-shadow:0 6px 22px rgba(200,16,46,.13);
+}
+.bg-card.must .no{color:rgba(200,16,46,.11)}
+.bg-card.must h3{color:var(--red-deep)}
+.bg-card .badge-must{
+  align-self:flex-start;
+  background:var(--red);color:var(--white);
+  font-size:10.5px;font-weight:700;letter-spacing:1.8px;
+  padding:5px 12px;border-radius:100px;margin-bottom:11px;
+  position:relative;z-index:1;white-space:nowrap;
+}
+.bg-btn{
+  align-self:flex-start;
+  display:inline-flex;align-items:center;gap:7px;
+  margin-top:16px;max-width:100%;
+  background:var(--red);color:var(--white);
+  text-decoration:none;font-size:12.5px;font-weight:700;letter-spacing:.3px;
+  padding:12px 18px;border-radius:100px;line-height:1.4;
+  box-shadow:0 4px 14px rgba(200,16,46,.28);
+  transition:background .2s ease, transform .2s ease;
+}
+.bg-btn:hover{background:var(--red-deep);transform:translateY(-1px)}
+.bg-btn .arw{transition:transform .2s ease}
+.bg-btn:hover .arw{transform:translateX(3px)}
+
+/* あると安心 */
+.bygo-extra{
+  margin-top:26px;background:var(--white);border-radius:14px;
+  padding:20px 26px;box-shadow:0 2px 10px rgba(0,0,0,.04);
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.bygo-extra .lb{
+  font-size:11.5px;font-weight:700;letter-spacing:2.5px;
+  color:var(--gold);white-space:nowrap;
+}
+.bygo-extra ul{display:flex;gap:10px;flex-wrap:wrap;list-style:none;padding:0;margin:0}
+.bygo-extra li{
+  font-size:13px;font-weight:500;background:var(--light);
+  padding:8px 16px;border-radius:100px;white-space:nowrap;
+}
+@media(max-width:560px){
+  .bygo{margin-top:28px;padding:54px 0 60px}
+  .bg-card{padding:24px 20px 22px}
+  .bg-card .no{font-size:44px;top:10px;right:15px}
+  .bygo-extra{padding:18px 20px;gap:12px}
+  .bygo-extra li{font-size:12.5px;padding:7px 13px}
+}
+
 </style>
 </head>
 <body>
@@ -1070,6 +1176,7 @@ footer .brand {
 <!-- ===== v2 : TOPBAR ===== -->
 <div class="topbar">
   <span class="tb-logo">台湾 2026</span>
+  <a href="#before">出発前</a>
   <a href="#schedule">日程</a>
   <a href="#meet">集合場所</a>
   <a href="#access">移動</a>
@@ -1128,6 +1235,82 @@ footer .brand {
     </div>
   </div>
 </div>
+
+
+<!-- ===== BEFORE YOU GO ===== -->
+<section class="bygo" id="before">
+  <div class="container">
+    <div class="section-title">
+      <div class="num">BEFORE YOU GO</div>
+      <h2>出発前にこれだけ</h2>
+      <p>台湾に着いてから困らないように、出発前にこの6つだけ準備しておけばOKです。</p>
+    </div>
+
+    <div class="bygo-grid">
+
+      <div class="bg-card">
+        <div class="no">01</div>
+        <div class="ico">🛂</div>
+        <h3>パスポート</h3>
+        <p>有効期限を事前に確認。</p>
+        <p>念のため、スマホにも顔写真ページの写真を保存しておきましょう。</p>
+      </div>
+
+      <div class="bg-card must">
+        <div class="no">02</div>
+        <div class="ico">📝</div>
+        <span class="badge-must">事前登録 必須</span>
+        <h3>Taiwan Arrival Card（TWAC）</h3>
+        <p>台湾入国前にオンラインで登録が必要です。</p>
+        <p><strong>今回は参加者各自で登録をお願いします。</strong></p>
+        <p>出発直前に慌てないよう、台湾到着日の7日前以降に各自で済ませておいてください。</p>
+        <a class="bg-btn" href="https://twac.immigration.gov.tw/" target="_blank" rel="noopener">TWAC公式サイトを開く<span class="arw">→</span></a>
+      </div>
+
+      <div class="bg-card">
+        <div class="no">03</div>
+        <div class="ico">📱</div>
+        <h3>eSIM / 海外通信</h3>
+        <p>台湾到着後すぐネットが使えるように、日本にいる間に準備しておくのがおすすめです。</p>
+      </div>
+
+      <div class="bg-card">
+        <div class="no">04</div>
+        <div class="ico">🚕</div>
+        <h3>Uber</h3>
+        <p>アプリのインストール・ログイン・支払い方法の登録まで、日本にいる間に済ませておいてください。</p>
+        <p>今回の旅行では移動にUberも利用予定です。</p>
+      </div>
+
+      <div class="bg-card onsite">
+        <div class="no">05</div>
+        <div class="ico">💳</div>
+        <h3>悠遊カード（EasyCard）</h3>
+        <p>台湾版のSuicaのような交通系ICカードです。MRT・バス・コンビニなどで利用できます。</p>
+        <p>空港・MRT駅・コンビニなどで購入できます。</p>
+        <span class="tag">現地で購入すればOK</span>
+      </div>
+
+      <div class="bg-card">
+        <div class="no">06</div>
+        <div class="ico">💬</div>
+        <h3>LINEグループ</h3>
+        <p>旅行中の集合連絡や予定変更などはLINEグループで共有します。</p>
+        <p>出発前に参加していることを確認し、旅行中は通知をONにしておいてください。</p>
+      </div>
+
+    </div>
+
+    <div class="bygo-extra">
+      <span class="lb">あると安心</span>
+      <ul>
+        <li>少額の台湾ドル現金</li>
+        <li>モバイルバッテリー</li>
+        <li>海外旅行保険</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <!-- ABOUT -->
 <section class="section section-dark">
